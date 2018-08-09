@@ -1,0 +1,1 @@
+This is the 2nd version of the kobold king. We will be isolating our code base as to get rid of the old code. This does not mean we lose acess to it, it just will not be in this current version of the project automatically.
