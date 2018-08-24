@@ -288,7 +288,7 @@ namespace LogicSpawn.RPGMaker.Editor
                     {
                         updatedObjects.Add(obj.name);
                     }
-                    PrefabUtility.ReplacePrefab(prefab, PrefabUtility.GetCorrespondingObjectFromSource(prefab), ReplacePrefabOptions.ConnectToPrefab);
+                    PrefabUtility.ReplacePrefab(prefab, PrefabUtility.GetPrefabParent(prefab), ReplacePrefabOptions.ConnectToPrefab);
                 }
 
                 Debug.Log("[RPGAIO] Updated Prefabs [Check console for more details] " + "\n\n" + updatedObjects.Count + " Objects Updated:" + "\n" + String.Join("\n",updatedObjects.ToArray()));
