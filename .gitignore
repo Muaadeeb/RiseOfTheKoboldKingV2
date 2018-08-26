@@ -29,9 +29,10 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-*.dll
 *.ide
 *.ide-wal
 *.ide-shm
 *.lock
 /RiseOfTheKoboldKingV2/.vs/*
+*.dll
+!RiseOfTheKoboldKingV2/Assets/Plugins/*.dll
