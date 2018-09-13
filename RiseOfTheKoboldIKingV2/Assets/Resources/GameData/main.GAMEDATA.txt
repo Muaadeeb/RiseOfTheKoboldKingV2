@@ -459,11 +459,11 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_ClassNameDefinition, Assembly-CSharp",
         "ID": "Default_Builtin_Class_10101010",
-        "Name": "Class",
-        "Description": "",
+        "Name": "Warrior",
+        "Description": "Peple trained to use weapons such as swords.",
         "Image": {
           "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
-          "ImagePath": ""
+          "ImagePath": "RPGMakerAssets/ToolbarIcons/combatIcon"
         }
       }
     ],
@@ -471,11 +471,11 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_RaceDefinition, Assembly-CSharp",
         "ID": "Default_Builtin_Race_10101010",
-        "Name": "Race",
-        "Description": "",
+        "Name": "Human",
+        "Description": "The humans lived on Earth.",
         "Image": {
           "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
-          "ImagePath": ""
+          "ImagePath": "MyAssets/humanPortrait"
         }
       }
     ],
@@ -483,12 +483,12 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_SubRaceDefinition, Assembly-CSharp",
         "ID": "Default_Builtin_SubRace_10101010",
-        "Name": "Sub-Race",
+        "Name": "Fighters",
         "ApplicableRaceID": "Default_Builtin_Race_10101010",
-        "Description": "",
+        "Description": "Humans who were trained for combat",
         "Image": {
           "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
-          "ImagePath": ""
+          "ImagePath": "RPGMakerAssets/RPGMakerIcon"
         }
       }
     ],
@@ -510,7 +510,7 @@
     "SkipSubRaceSelection": false,
     "RemoveSubRaceDescription": true,
     "CustomisationsEnabled": true,
-    "ShownDescription": 1,
+    "ShownDescription": 2,
     "ClassDefinitions": [
       {
         "$type": "LogicSpawn.RPGMaker.Rm_ClassDefinition, Assembly-CSharp",
@@ -525,14 +525,14 @@
           }
         ],
         "ClassPrefabPath": "Prefabs/Classes/Default",
-        "Name": "Default",
-        "Description": "A strong combatant.",
+        "Name": "RPGMecanimCharacter",
+        "Description": "This is our starting character.",
         "ExpDefinitionID": "Player_Exp_Definition",
         "AttackStyle": 0,
         "UnarmedAttackRange": 1.5,
-        "UnarmedAttackSpeed": 2.0,
-        "UnarmedAttackDamage": 1,
-        "StartingGold": 0,
+        "UnarmedAttackSpeed": 1.2,
+        "UnarmedAttackDamage": 10,
+        "StartingGold": 1000,
         "StartingPet": "",
         "HasStartingPet": false,
         "StartAtWorldLocation": false,
@@ -540,7 +540,7 @@
         "StartingWorldArea": null,
         "StartingLocation": null,
         "AutoAttackPrefabPath": "",
-        "AutoAttackImpactPrefabPath": null,
+        "AutoAttackImpactPrefabPath": "",
         "ProjectileTravelSound": {
           "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
           "AudioPath": ""
@@ -550,8 +550,8 @@
           "AudioPath": ""
         },
         "ProjectileSpeed": 10.0,
-        "ImagePath": "",
-        "AnimationType": 0,
+        "ImagePath": "RPGMakerAssets/sampleImageB",
+        "AnimationType": 1,
         "LegacyAnimations": {
           "$type": "LogicSpawn.RPGMaker.Core.LegacyAnimation, Assembly-CSharp",
           "UnarmedAnim": {
@@ -778,20 +778,157 @@
             "MecanimAnimationGroup": 0,
             "SoundPath": ""
           },
-          "DefaultAttackAnimations": [],
+          "DefaultAttackAnimations": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AnimationDefinition, Assembly-CSharp",
+              "Name": "Attack 0",
+              "Animation": "",
+              "WrapMode": 2,
+              "Speed": 1.0,
+              "Backwards": false,
+              "ImpactTime": 0.7,
+              "RPGAnimationSet": -1,
+              "WeaponTypeIndex": 0,
+              "MecanimAnimationNumber": 0,
+              "MecanimAnimationGroup": 0,
+              "SoundPath": ""
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AnimationDefinition, Assembly-CSharp",
+              "Name": "Attack 1",
+              "Animation": "",
+              "WrapMode": 2,
+              "Speed": 1.0,
+              "Backwards": false,
+              "ImpactTime": 0.7,
+              "RPGAnimationSet": -1,
+              "WeaponTypeIndex": 0,
+              "MecanimAnimationNumber": 1,
+              "MecanimAnimationGroup": 0,
+              "SoundPath": ""
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AnimationDefinition, Assembly-CSharp",
+              "Name": "Attack 2",
+              "Animation": "",
+              "WrapMode": 2,
+              "Speed": 1.0,
+              "Backwards": false,
+              "ImpactTime": 0.7,
+              "RPGAnimationSet": -1,
+              "WeaponTypeIndex": 0,
+              "MecanimAnimationNumber": 2,
+              "MecanimAnimationGroup": 0,
+              "SoundPath": ""
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AnimationDefinition, Assembly-CSharp",
+              "Name": "Attack 3",
+              "Animation": "",
+              "WrapMode": 2,
+              "Speed": 1.0,
+              "Backwards": false,
+              "ImpactTime": 0.7,
+              "RPGAnimationSet": -1,
+              "WeaponTypeIndex": 0,
+              "MecanimAnimationNumber": 3,
+              "MecanimAnimationGroup": 0,
+              "SoundPath": ""
+            }
+          ],
           "Default2HAttackAnimations": [],
           "DefaultDWAttackAnimations": [],
-          "WeaponAnimations": []
+          "WeaponAnimations": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.WeaponAnimationDefinition, Assembly-CSharp",
+              "WeaponTypeID": "Default_WepType",
+              "Animations": [],
+              "DualWieldAnimations": []
+            }
+          ]
         },
-        "StartingAttributes": [],
-        "StartingStats": [],
-        "StartingVitals": [],
+        "StartingAttributes": [
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
+            "Amount": 10
+          }
+        ],
+        "StartingStats": [
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmountFloat, Assembly-CSharp",
+            "AsvtID": "Movement",
+            "Amount": 1.0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmountFloat, Assembly-CSharp",
+            "AsvtID": "Attack Speed",
+            "Amount": 1.0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmountFloat, Assembly-CSharp",
+            "AsvtID": "Attack Range",
+            "Amount": 2.0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmountFloat, Assembly-CSharp",
+            "AsvtID": "Cast Speed",
+            "Amount": 1.0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmountFloat, Assembly-CSharp",
+            "AsvtID": "Critical Chance",
+            "Amount": 0.0
+          }
+        ],
+        "StartingVitals": [
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "Amount": 100
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+            "Amount": 100
+          }
+        ],
         "StartingTraitLevels": [],
         "AttributePerLevel": [
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
             "Amount": 5
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
+            "Amount": 0
           }
         ],
         "SkillMetaImmunitiesID": [],
@@ -806,7 +943,15 @@
           "SlotName": "",
           "ItemID": ""
         },
-        "StartingEquipped": [],
+        "StartingEquipped": [
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "OffHand",
+            "SlotName": "OffHand",
+            "ItemID": ""
+          }
+        ],
         "HasStartingQuest": false,
         "StartingQuestID": null,
         "EquipmentInfo": {
@@ -1485,7 +1630,153 @@
         {
           "$type": "LogicSpawn.RPGMaker.Core.NodeTree, Assembly-CSharp",
           "Name": "Core_StatScaling",
-          "Nodes": [],
+          "Nodes": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Movement",
+              "NewDescription": "Add additional nodes to modify base value of a statistic based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Movement",
+              "ReturnType": 0,
+              "ID": "4b6ff10f-2ab4-4dd0-9a4d-426ffb46951b",
+              "NodeChainName": "Movement",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 87.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 4,
+              "Identifier": "Movement",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Attack Speed",
+              "NewDescription": "Add additional nodes to modify base value of a statistic based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Attack Speed",
+              "ReturnType": 0,
+              "ID": "de527303-1ea2-418e-86c7-625352eda954",
+              "NodeChainName": "Attack Speed",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 287.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 5,
+              "Identifier": "Attack Speed",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Attack Range",
+              "NewDescription": "Add additional nodes to modify base value of a statistic based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Attack Range",
+              "ReturnType": 0,
+              "ID": "933dac92-1b6c-4b27-803d-33e32b200723",
+              "NodeChainName": "Attack Range",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 487.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 6,
+              "Identifier": "Attack Range",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Cast Speed",
+              "NewDescription": "Add additional nodes to modify base value of a statistic based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Cast Speed",
+              "ReturnType": 0,
+              "ID": "1176b749-7ec7-4ee8-b705-785fbb801ea5",
+              "NodeChainName": "Cast Speed",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 687.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 7,
+              "Identifier": "Cast Speed",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Critical Chance",
+              "NewDescription": "Add additional nodes to modify base value of a statistic based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Critical Chance",
+              "ReturnType": 0,
+              "ID": "471fa4ed-7d82-40e7-9742-53c4b06897e1",
+              "NodeChainName": "Critical Chance",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 887.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 8,
+              "Identifier": "Critical Chance",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            }
+          ],
           "ID": "Core_StatScaling",
           "Required": true,
           "Type": 0,
@@ -1508,7 +1799,66 @@
         {
           "$type": "LogicSpawn.RPGMaker.Core.NodeTree, Assembly-CSharp",
           "Name": "Core_VitalScaling",
-          "Nodes": [],
+          "Nodes": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Health",
+              "NewDescription": "Add additional nodes to modify base value of a vital based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Health",
+              "ReturnType": 0,
+              "ID": "ad484e69-f149-46b1-a7e2-6fcbe5c92ae3",
+              "NodeChainName": "Health",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 87.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 9,
+              "Identifier": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Mana",
+              "NewDescription": "Add additional nodes to modify base value of a vital based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Mana",
+              "ReturnType": 0,
+              "ID": "d5ea1980-1f6e-4306-8cfe-575643d2e0f2",
+              "NodeChainName": "Mana",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 287.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 10,
+              "Identifier": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            }
+          ],
           "ID": "Core_VitalScaling",
           "Required": true,
           "Type": 0,
@@ -1543,17 +1893,7 @@
     },
     "WorldMapNodeBank": {
       "$type": "LogicSpawn.RPGMaker.NodeBank, Assembly-CSharp",
-      "NodeTrees": [
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.NodeTree, Assembly-CSharp",
-          "Name": "Core_InitialMap",
-          "Nodes": [],
-          "ID": "Core_InitialMap",
-          "Required": true,
-          "Type": 0,
-          "Variables": []
-        }
-      ],
+      "NodeTrees": [],
       "Type": 3
     },
     "AchievementsNodeBank": {
