@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NPC
+  - Enemy
+  - SceneMaster
+  - SpawnPosition
+  - Ground
+  - Interactable
+  - Harvestable
+  - LootItem
+  - LootSpawner
+  - AudioPlayer
+  - CastAreaProjector
+  - EventHandler
+  - RPGAudioObject
+  - IgnoreProjectiles
+  - UIHandler
+  - missile
+  - ground
+  - shield
+  - explosion
+  - ScreenFader
+  - ShadowSource
+  - MinimapCamera
+  - Draggable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Combatant
+  - LootItem
+  - SkillPrefab
+  - Ragdoll
+  - Minimap
+  - PlayerModel
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
