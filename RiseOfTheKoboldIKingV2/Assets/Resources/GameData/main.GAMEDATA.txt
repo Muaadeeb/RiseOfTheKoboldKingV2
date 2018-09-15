@@ -19,12 +19,12 @@
     ],
     "Cursors": {
       "$type": "LogicSpawn.RPGMaker.Cursors, Assembly-CSharp",
-      "DefaultCursorPath": "",
-      "NpcCursorPath": "",
-      "InteractCursorPath": "",
-      "ItemCursorPath": "",
-      "EnemyCursorPath": "",
-      "HarvestCursorPath": "",
+      "DefaultCursorPath": "RPGMakerAssets/Auto_attack",
+      "NpcCursorPath": "RPGMakerAssets/ToolbarIcons/popupText",
+      "InteractCursorPath": "RPGMakerAssets/ToolbarIcons/cursor1",
+      "ItemCursorPath": "RPGMakerAssets/ToolbarIcons/saveIcon",
+      "EnemyCursorPath": "RPGMakerAssets/ToolbarIcons/combatIcon",
+      "HarvestCursorPath": "RPGMakerAssets/petPassive",
       "DraggableCursorPath": ""
     },
     "MinimapOptions": {
@@ -50,7 +50,12 @@
     "PlayUniqueMusicForBattles": false,
     "PlayUniqueMusicForScenes": false,
     "PlayUniqueMusicForDeath": false,
-    "GlobalPlaylist": [],
+    "GlobalPlaylist": [
+      {
+        "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+        "AudioPath": "Audio/DemoAudio/03. FULLY OF GLORY SECOND PART LOOPABLE-01"
+      }
+    ],
     "ScenePlaylists": [],
     "BattlePlaylist": [],
     "DeathMusic": {
@@ -536,7 +541,7 @@
         "StartingPet": "",
         "HasStartingPet": false,
         "StartAtWorldLocation": false,
-        "StartingScene": "DemoScene",
+        "StartingScene": "Area-01",
         "StartingWorldArea": null,
         "StartingLocation": null,
         "AutoAttackPrefabPath": "",
@@ -979,7 +984,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 1.5,
+            "SavedFloatValue": 0.691730142,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
