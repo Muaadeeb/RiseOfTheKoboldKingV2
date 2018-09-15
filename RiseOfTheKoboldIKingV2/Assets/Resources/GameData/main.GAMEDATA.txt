@@ -665,7 +665,22 @@
     ],
     "RmTierHandler": {
       "$type": "LogicSpawn.RPGMaker.Rm_TierHandler, Assembly-CSharp",
-      "Tiers": [],
+      "Tiers": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Rm_Tier, Assembly-CSharp",
+          "TierID": "6767bcb5-bcbd-4b38-b1c1-eb8fab3baf75",
+          "Name": "Tier I",
+          "minLevel": 0.0,
+          "maxLevel": 10.0
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Rm_Tier, Assembly-CSharp",
+          "TierID": "59981388-f38d-4a1e-a23e-1858b7b7d622",
+          "Name": "Tier II",
+          "minLevel": 11.0,
+          "maxLevel": 25.0
+        }
+      ],
       "MaxLevel": 25
     },
     "StashMode": 1,
@@ -1201,6 +1216,16 @@
             "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
             "ItemID": "45f35af4-b797-4c93-9315-8b072c2c8e14",
             "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "c310a510-d262-4b93-8998-8fd58a1e2eb6",
+            "Amount": 50
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "944064e9-3a30-41bc-85fc-82a77aa9d132",
+            "Amount": 1
           }
         ],
         "StartingEquippedWeapon": {
@@ -1344,7 +1369,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 0.7538929,
+            "SavedFloatValue": 0.7187738,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1608,43 +1633,108 @@
     },
     "CraftableItems": {
       "$type": "LogicSpawn.RPGMaker.Core.CraftableItemRepository, Assembly-CSharp",
-      "AllItems": []
+      "AllItems": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 0,
+            "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "FixedRestore": true,
+            "AmountToRestore": 500,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.0,
+            "Duration": 1.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 0.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "c9dc2578-f639-47d9-8f5d-9654cb2ca01c",
+          "InventoryRefID": null,
+          "Name": "Health Potion+",
+          "Description": "A super health potion",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 2,
+          "ImagePath": "RPGMakerAssets/copyIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
+        }
+      ]
     },
     "CraftLists": {
       "$type": "LogicSpawn.RPGMaker.Core.CraftListRepository, Assembly-CSharp",
       "TierCraftLists": [
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
+          "TierID": "6767bcb5-bcbd-4b38-b1c1-eb8fab3baf75",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "c124c971-f612-4c47-b468-49db9d171720",
+              "Quantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "da0b3992-cd0b-42bb-a965-d93f0f6327cb",
+              "Quantity": 1
+            }
+          ]
         },
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
+          "TierID": "59981388-f38d-4a1e-a23e-1858b7b7d622",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "c124c971-f612-4c47-b468-49db9d171720",
+              "Quantity": 100
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "da0b3992-cd0b-42bb-a965-d93f0f6327cb",
+              "Quantity": 100
+            }
+          ]
         }
       ],
-      "CustomCraftLists": []
+      "CustomCraftLists": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Rm_CustomCraftList, Assembly-CSharp",
+          "ItemID": "c9dc2578-f639-47d9-8f5d-9654cb2ca01c",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "944064e9-3a30-41bc-85fc-82a77aa9d132",
+              "Quantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "c310a510-d262-4b93-8998-8fd58a1e2eb6",
+              "Quantity": 5
+            }
+          ]
+        }
+      ]
     },
     "Items": {
       "$type": "LogicSpawn.RPGMaker.Core.ItemRepository, Assembly-CSharp",
@@ -2380,6 +2470,51 @@
           "EventTreeIdToRunOnDrop": "",
           "DropEventHasRun": false,
           "CustomGroundPrefabPath": ""
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 0,
+            "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "FixedRestore": true,
+            "AmountToRestore": 10,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.0,
+            "Duration": 1.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 0.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "c310a510-d262-4b93-8998-8fd58a1e2eb6",
+          "InventoryRefID": null,
+          "Name": "Apple",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 2,
+          "ImagePath": "RPGMakerAssets/addIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
         }
       ]
     },
