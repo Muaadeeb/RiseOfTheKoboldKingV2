@@ -1176,7 +1176,33 @@
         "SkillMetaSusceptibilities": [],
         "StartingSkillIds": [],
         "StartingTalentIds": [],
-        "StartingItems": [],
+        "StartingItems": [
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "944064e9-3a30-41bc-85fc-82a77aa9d132",
+            "Amount": 5
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "b46d7580-dd83-4a96-9505-2d9abfc51c1d",
+            "Amount": 5
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "4c206380-bd78-48d0-b7c4-918d3fb23789",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "c37246da-842b-4916-a176-2f91d07bc792",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "45f35af4-b797-4c93-9315-8b072c2c8e14",
+            "Amount": 0
+          }
+        ],
         "StartingEquippedWeapon": {
           "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
           "Enabled": true,
@@ -1318,7 +1344,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 0.5470791,
+            "SavedFloatValue": 0.7538929,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1650,8 +1676,8 @@
           },
           "Damage": {
             "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
-            "MinDamage": 1,
-            "MaxDamage": 1,
+            "MinDamage": 15,
+            "MaxDamage": 50,
             "CriticalChance": 0.0,
             "ElementalDamages": [],
             "SkillMetaID": null,
@@ -2890,7 +2916,7 @@
           "OverrideAggroRadiusValue": 25.0,
           "MonsterTypeID": "c832b08a-9aec-4835-b489-8bd6e0814710",
           "GuaranteedLoot": [],
-          "MaxItemsFromLootTable": 1,
+          "MaxItemsFromLootTable": 5,
           "LootTables": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.LootOptions, Assembly-CSharp",
@@ -3564,7 +3590,7 @@
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTable, Assembly-CSharp",
           "Name": "Basic Loot",
-          "ChanceForItem": 50,
+          "ChanceForItem": 100,
           "LootTableItems": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
@@ -3574,25 +3600,123 @@
               "IsCraftableItem": false,
               "IsGold": false,
               "IsEmpty": false,
-              "Chance": 25.0,
+              "Chance": 10.0,
               "sliderMin": 0.0,
-              "sliderMax": 25.0,
+              "sliderMax": 10.0,
               "MinQuantity": 1,
               "MaxQuantity": 1
             },
             {
               "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
-              "ItemID": "",
-              "IsNormalItem": false,
+              "ItemID": "b46d7580-dd83-4a96-9505-2d9abfc51c1d",
+              "IsNormalItem": true,
               "IsQuestItem": false,
               "IsCraftableItem": false,
-              "IsGold": true,
+              "IsGold": false,
               "IsEmpty": false,
-              "Chance": 75.0,
-              "sliderMin": 25.0,
+              "Chance": 10.0,
+              "sliderMin": 10.0,
+              "sliderMax": 20.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "da0b3992-cd0b-42bb-a965-d93f0f6327cb",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 20.0,
+              "sliderMax": 30.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "c124c971-f612-4c47-b468-49db9d171720",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 30.0,
+              "sliderMax": 40.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "944064e9-3a30-41bc-85fc-82a77aa9d132",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 40.0,
+              "sliderMax": 50.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "3e653b00-8f3f-4fe2-b681-66f614d831c2",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 50.0,
+              "sliderMax": 60.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "4c206380-bd78-48d0-b7c4-918d3fb23789",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 20.0,
+              "sliderMin": 60.0,
+              "sliderMax": 80.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "c37246da-842b-4916-a176-2f91d07bc792",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 80.0,
+              "sliderMax": 90.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "45f35af4-b797-4c93-9315-8b072c2c8e14",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 90.0,
               "sliderMax": 100.0,
-              "MinQuantity": 100,
-              "MaxQuantity": 200
+              "MinQuantity": 1,
+              "MaxQuantity": 1
             }
           ],
           "ID": "266d30f8-d20c-457f-8201-6444413db762"
