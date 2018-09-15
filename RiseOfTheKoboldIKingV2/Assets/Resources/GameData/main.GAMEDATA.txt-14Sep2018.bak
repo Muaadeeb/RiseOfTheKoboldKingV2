@@ -259,21 +259,127 @@
         "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
         "ID": "OffHand",
         "Name": "OffHand",
-        "PrefabPath": null
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "e7ff5807-145a-4267-8997-0b1520d8eb08",
+        "Name": "Head",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "5fbd93e7-1e16-4cea-ab03-252c8634839b",
+        "Name": "Headband",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "57e9a0e0-3e11-4180-86ea-c581ff4a2fd0",
+        "Name": "Eyes",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "f0126ed8-76fd-4d40-a75b-70cb6d2734fb",
+        "Name": "Shoulders",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "5d8be8c2-3056-4764-bf61-9b43de0987e7",
+        "Name": "Neck",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "b3b4248e-608d-4741-ae03-842a6c7b46e3",
+        "Name": "Chest",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "9de55db5-93d5-4bd6-8ac8-bc560ca09621",
+        "Name": "Body",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "6fe1273d-5f73-4df8-be91-f0bc60cf327d",
+        "Name": "Armor",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "360c92df-2b89-4444-8b0f-7e955eab832a",
+        "Name": "Belt",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "8f9e16cc-941e-4f25-ab18-490750964032",
+        "Name": "Wrists",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "ad26259f-9d22-48b5-912e-df6352bb1900",
+        "Name": "Hands",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "6aa4497b-2d6e-493a-9bd6-82baac459565",
+        "Name": "Ring 1",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "7a23d05d-d4f9-4c70-8589-7f6f2e4b7420",
+        "Name": "Ring 2",
+        "PrefabPath": ""
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.SlotDefinition, Assembly-CSharp",
+        "ID": "cc9e2bae-41f3-414a-b32f-6269947be07f",
+        "Name": "Feet",
+        "PrefabPath": ""
       }
     ],
     "WeaponTypes": [
       {
         "$type": "LogicSpawn.RPGMaker.WeaponTypeDefinition, Assembly-CSharp",
         "ID": "Default_WepType",
-        "Name": "Default",
-        "PrefabPath": null,
+        "Name": "Bow",
+        "PrefabPath": "",
+        "IsTwoHanded": false,
+        "AllowDualWield": false,
+        "AttackStyle": 1,
+        "ProjectileSpeed": 10.0,
+        "AutoAttackPrefabPath": "RPGAIOPrefabRepository/Auto_Attack_Projectile_Prefab_2",
+        "AutoAttackImpactPrefabPath": "",
+        "ProjectileTravelSound": {
+          "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+          "AudioPath": ""
+        },
+        "AutoAttackImpactSound": {
+          "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+          "AudioPath": ""
+        },
+        "AttackRange": 2.0,
+        "AttackSpeed": 1.2
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.WeaponTypeDefinition, Assembly-CSharp",
+        "ID": "0c85b1be-3a1f-44ba-a8c2-99ab8e82d0de",
+        "Name": "Sword",
+        "PrefabPath": "",
         "IsTwoHanded": false,
         "AllowDualWield": false,
         "AttackStyle": 0,
         "ProjectileSpeed": 10.0,
-        "AutoAttackPrefabPath": null,
-        "AutoAttackImpactPrefabPath": null,
+        "AutoAttackPrefabPath": "",
+        "AutoAttackImpactPrefabPath": "",
         "ProjectileTravelSound": {
           "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
           "AudioPath": ""
@@ -357,6 +463,12 @@
         "ID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
         "Name": "Common",
         "Color": 7
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.RarityDefinition, Assembly-CSharp",
+        "ID": "458d0045-683e-496c-8f91-4a8e23b839c9",
+        "Name": "Rare",
+        "Color": 2
       }
     ],
     "ItemTypeNames": [
@@ -453,7 +565,104 @@
     "ScaleCraftList": true,
     "ScaleDismantleList": true,
     "CraftTime": 1.0,
-    "CraftSlotScalings": [],
+    "CraftSlotScalings": [
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "Weapon",
+        "Multiplier": 1,
+        "SlotName": "Weapon"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "OffHand",
+        "Multiplier": 1,
+        "SlotName": "OffHand"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "e7ff5807-145a-4267-8997-0b1520d8eb08",
+        "Multiplier": 1,
+        "SlotName": "Head"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "5fbd93e7-1e16-4cea-ab03-252c8634839b",
+        "Multiplier": 1,
+        "SlotName": "Headband"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "57e9a0e0-3e11-4180-86ea-c581ff4a2fd0",
+        "Multiplier": 1,
+        "SlotName": "Eyes"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "f0126ed8-76fd-4d40-a75b-70cb6d2734fb",
+        "Multiplier": 1,
+        "SlotName": "Shoulders"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "5d8be8c2-3056-4764-bf61-9b43de0987e7",
+        "Multiplier": 1,
+        "SlotName": "Neck"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "b3b4248e-608d-4741-ae03-842a6c7b46e3",
+        "Multiplier": 1,
+        "SlotName": "Chest"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "9de55db5-93d5-4bd6-8ac8-bc560ca09621",
+        "Multiplier": 1,
+        "SlotName": "Body"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "6fe1273d-5f73-4df8-be91-f0bc60cf327d",
+        "Multiplier": 1,
+        "SlotName": "Armor"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "360c92df-2b89-4444-8b0f-7e955eab832a",
+        "Multiplier": 1,
+        "SlotName": "Belt"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "8f9e16cc-941e-4f25-ab18-490750964032",
+        "Multiplier": 1,
+        "SlotName": "Wrists"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "ad26259f-9d22-48b5-912e-df6352bb1900",
+        "Multiplier": 1,
+        "SlotName": "Hands"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "6aa4497b-2d6e-493a-9bd6-82baac459565",
+        "Multiplier": 1,
+        "SlotName": "Ring 1"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "7a23d05d-d4f9-4c70-8589-7f6f2e4b7420",
+        "Multiplier": 1,
+        "SlotName": "Ring 2"
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.CraftSlotScaling, Assembly-CSharp",
+        "SlotIdentifier": "cc9e2bae-41f3-414a-b32f-6269947be07f",
+        "Multiplier": 1,
+        "SlotName": "Feet"
+      }
+    ],
     "RmTierHandler": {
       "$type": "LogicSpawn.RPGMaker.Rm_TierHandler, Assembly-CSharp",
       "Tiers": [],
@@ -860,6 +1069,12 @@
               "WeaponTypeID": "Default_WepType",
               "Animations": [],
               "DualWieldAnimations": []
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.WeaponAnimationDefinition, Assembly-CSharp",
+              "WeaponTypeID": "0c85b1be-3a1f-44ba-a8c2-99ab8e82d0de",
+              "Animations": [],
+              "DualWieldAnimations": []
             }
           ]
         },
@@ -964,10 +1179,10 @@
         "StartingItems": [],
         "StartingEquippedWeapon": {
           "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
-          "Enabled": false,
+          "Enabled": true,
           "SlotID": "",
           "SlotName": "",
-          "ItemID": ""
+          "ItemID": "5b6f8318-d158-4798-90c7-2c9810821c68"
         },
         "StartingEquipped": [
           {
@@ -975,6 +1190,104 @@
             "Enabled": false,
             "SlotID": "OffHand",
             "SlotName": "OffHand",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "e7ff5807-145a-4267-8997-0b1520d8eb08",
+            "SlotName": "Head",
+            "ItemID": "5b6f8318-d158-4798-90c7-2c9810821c68"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "5fbd93e7-1e16-4cea-ab03-252c8634839b",
+            "SlotName": "Headband",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": true,
+            "SlotID": "57e9a0e0-3e11-4180-86ea-c581ff4a2fd0",
+            "SlotName": "Eyes",
+            "ItemID": "29fcfbda-6af5-4401-b884-509c01c5f8e0"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "f0126ed8-76fd-4d40-a75b-70cb6d2734fb",
+            "SlotName": "Shoulders",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "5d8be8c2-3056-4764-bf61-9b43de0987e7",
+            "SlotName": "Neck",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "b3b4248e-608d-4741-ae03-842a6c7b46e3",
+            "SlotName": "Chest",
+            "ItemID": "faa99539-b5bc-431b-bd4b-1e513c1b97cc"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "9de55db5-93d5-4bd6-8ac8-bc560ca09621",
+            "SlotName": "Body",
+            "ItemID": "5b6f8318-d158-4798-90c7-2c9810821c68"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": true,
+            "SlotID": "6fe1273d-5f73-4df8-be91-f0bc60cf327d",
+            "SlotName": "Armor",
+            "ItemID": "faa99539-b5bc-431b-bd4b-1e513c1b97cc"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": true,
+            "SlotID": "360c92df-2b89-4444-8b0f-7e955eab832a",
+            "SlotName": "Belt",
+            "ItemID": "42ccefc2-94e3-40c7-a13f-855c5216a6ff"
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "8f9e16cc-941e-4f25-ab18-490750964032",
+            "SlotName": "Wrists",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "ad26259f-9d22-48b5-912e-df6352bb1900",
+            "SlotName": "Hands",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "6aa4497b-2d6e-493a-9bd6-82baac459565",
+            "SlotName": "Ring 1",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "7a23d05d-d4f9-4c70-8589-7f6f2e4b7420",
+            "SlotName": "Ring 2",
+            "ItemID": ""
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
+            "Enabled": false,
+            "SlotID": "cc9e2bae-41f3-414a-b32f-6269947be07f",
+            "SlotName": "Feet",
             "ItemID": ""
           }
         ],
@@ -1005,7 +1318,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 1.0,
+            "SavedFloatValue": 0.5470791,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1398,6 +1711,625 @@
           "DropEventHasRun": false,
           "CustomGroundPrefabPath": "",
           "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Apparel, Assembly-CSharp",
+          "apparelSlotID": "57e9a0e0-3e11-4180-86ea-c581ff4a2fd0",
+          "AllClasses": true,
+          "ClassID": "???",
+          "ClassIDs": [],
+          "AttributeBuffs": [],
+          "VitalBuffs": [],
+          "StatisticBuffs": [],
+          "SocketHolder": {
+            "$type": "LogicSpawn.RPGMaker.Core.SocketHolder, Assembly-CSharp",
+            "Sockets": []
+          },
+          "SetCVarOnEquip": false,
+          "SetCVarOnUnEquip": false,
+          "CustomVariableOnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "CustomVariableOnUnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "StatusDurationReduction": [],
+          "VitalRegenBonuses": [],
+          "SkillMetaImmunitiesID": [],
+          "SkillMetaSusceptibilities": [],
+          "ID": "29fcfbda-6af5-4401-b884-509c01c5f8e0",
+          "InventoryRefID": null,
+          "Name": "Glasses",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 0,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Apparel, Assembly-CSharp",
+          "apparelSlotID": "f0126ed8-76fd-4d40-a75b-70cb6d2734fb",
+          "AllClasses": true,
+          "ClassID": "???",
+          "ClassIDs": [],
+          "AttributeBuffs": [],
+          "VitalBuffs": [],
+          "StatisticBuffs": [],
+          "SocketHolder": {
+            "$type": "LogicSpawn.RPGMaker.Core.SocketHolder, Assembly-CSharp",
+            "Sockets": []
+          },
+          "SetCVarOnEquip": false,
+          "SetCVarOnUnEquip": false,
+          "CustomVariableOnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "CustomVariableOnUnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "StatusDurationReduction": [],
+          "VitalRegenBonuses": [],
+          "SkillMetaImmunitiesID": [],
+          "SkillMetaSusceptibilities": [],
+          "ID": "b26ef40e-6b24-49fd-8bb8-10e0c8c9491d",
+          "InventoryRefID": null,
+          "Name": "Shoulder Pads",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 0,
+          "ImagePath": "RPGMakerAssets/ToolbarIcons/achievementIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Apparel, Assembly-CSharp",
+          "apparelSlotID": "360c92df-2b89-4444-8b0f-7e955eab832a",
+          "AllClasses": true,
+          "ClassID": "???",
+          "ClassIDs": [],
+          "AttributeBuffs": [],
+          "VitalBuffs": [],
+          "StatisticBuffs": [],
+          "SocketHolder": {
+            "$type": "LogicSpawn.RPGMaker.Core.SocketHolder, Assembly-CSharp",
+            "Sockets": []
+          },
+          "SetCVarOnEquip": false,
+          "SetCVarOnUnEquip": false,
+          "CustomVariableOnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "CustomVariableOnUnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "StatusDurationReduction": [],
+          "VitalRegenBonuses": [],
+          "SkillMetaImmunitiesID": [],
+          "SkillMetaSusceptibilities": [],
+          "ID": "42ccefc2-94e3-40c7-a13f-855c5216a6ff",
+          "InventoryRefID": null,
+          "Name": "Belt of Giant's Strength",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 0,
+          "ImagePath": "RPGMakerAssets/ToolbarIcons/eventsIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Apparel, Assembly-CSharp",
+          "apparelSlotID": "6fe1273d-5f73-4df8-be91-f0bc60cf327d",
+          "AllClasses": true,
+          "ClassID": "???",
+          "ClassIDs": [],
+          "AttributeBuffs": [],
+          "VitalBuffs": [],
+          "StatisticBuffs": [],
+          "SocketHolder": {
+            "$type": "LogicSpawn.RPGMaker.Core.SocketHolder, Assembly-CSharp",
+            "Sockets": []
+          },
+          "SetCVarOnEquip": false,
+          "SetCVarOnUnEquip": false,
+          "CustomVariableOnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "CustomVariableOnUnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "StatusDurationReduction": [],
+          "VitalRegenBonuses": [],
+          "SkillMetaImmunitiesID": [],
+          "SkillMetaSusceptibilities": [],
+          "ID": "faa99539-b5bc-431b-bd4b-1e513c1b97cc",
+          "InventoryRefID": null,
+          "Name": "Bronze Chest Plate",
+          "Description": "Provides Protection.",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 0,
+          "ImagePath": "RPGMakerAssets/addIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Weapon, Assembly-CSharp",
+          "WeaponTypeID": "Default_WepType",
+          "OverrideAttackSpeed": false,
+          "NewAttackSpeed": 1.0,
+          "OverrideAttackRange": false,
+          "NewAttackRange": 2.0,
+          "OverrideProjectileSpeed": true,
+          "NewProjectileSpeed": 25.0,
+          "OverrideProjectilePrefabPath": "",
+          "AllowDualWield": true,
+          "HasProcEffect": false,
+          "ProcEffect": {
+            "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+            "ProcCondition": 2,
+            "Parameter": 1.0,
+            "ParameterCounter": 0,
+            "ProcEffectType": 3,
+            "PullType": 0,
+            "PullAllTheWay": true,
+            "EffectParameter": 1.0,
+            "EffectParameterString": null,
+            "HasDuration": false,
+            "Duration": 0.0
+          },
+          "Damage": {
+            "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+            "MinDamage": 50,
+            "MaxDamage": 100,
+            "CriticalChance": 0.0,
+            "ElementalDamages": [],
+            "SkillMetaID": null,
+            "IsCritical": false
+          },
+          "AllClasses": true,
+          "ClassID": "???",
+          "ClassIDs": [],
+          "AttributeBuffs": [],
+          "VitalBuffs": [],
+          "StatisticBuffs": [],
+          "SocketHolder": {
+            "$type": "LogicSpawn.RPGMaker.Core.SocketHolder, Assembly-CSharp",
+            "Sockets": []
+          },
+          "SetCVarOnEquip": false,
+          "SetCVarOnUnEquip": false,
+          "CustomVariableOnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "CustomVariableOnUnEquip": {
+            "$type": "LogicSpawn.RPGMaker.Rm_CustomVariableGetSet, Assembly-CSharp",
+            "VariableID": "",
+            "FloatValue": 0.0,
+            "StringValue": "",
+            "IntValue": 0,
+            "BoolValue": false
+          },
+          "StatusDurationReduction": [],
+          "VitalRegenBonuses": [],
+          "SkillMetaImmunitiesID": [],
+          "SkillMetaSusceptibilities": [],
+          "ID": "1a8bf90f-629e-4e08-b0b0-3054d08d521b",
+          "InventoryRefID": null,
+          "Name": "Archery Bow",
+          "Description": "",
+          "RarityID": "458d0045-683e-496c-8f91-4a8e23b839c9",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 1,
+          "ImagePath": "RPGMakerAssets/Gold 1",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "RequiredLevel": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Material, Assembly-CSharp",
+          "ID": "b46d7580-dd83-4a96-9505-2d9abfc51c1d",
+          "InventoryRefID": null,
+          "Name": "Mana Gem",
+          "Description": "For creating mana potions\n",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 3,
+          "ImagePath": "RPGMakerAssets/greyBorder",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Material, Assembly-CSharp",
+          "ID": "da0b3992-cd0b-42bb-a965-d93f0f6327cb",
+          "InventoryRefID": null,
+          "Name": "Purple Gem",
+          "Description": "Used in crafting\n",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 3,
+          "ImagePath": "RPGMakerAssets/ToolbarIcons/cursor2",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Material, Assembly-CSharp",
+          "ID": "c124c971-f612-4c47-b468-49db9d171720",
+          "InventoryRefID": null,
+          "Name": "Leaf",
+          "Description": "Used in crafting\n",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 3,
+          "ImagePath": "RPGMakerAssets/nodeAdvSelected",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 0,
+            "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "FixedRestore": true,
+            "AmountToRestore": 100,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.0,
+            "Duration": 1.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 0.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "944064e9-3a30-41bc-85fc-82a77aa9d132",
+          "InventoryRefID": null,
+          "Name": "Health Potion",
+          "Description": "Restores health",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 2,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 1,
+            "VitalToRestoreID": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+            "FixedRestore": true,
+            "AmountToRestore": 50,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.5,
+            "Duration": 3.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 3.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "3e653b00-8f3f-4fe2-b681-66f614d831c2",
+          "InventoryRefID": null,
+          "Name": "Mana Potion",
+          "Description": "Restores mana over time.\n",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 2,
+          "ImagePath": "RPGMakerAssets/ToolbarIcons/eventsIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Book, Assembly-CSharp",
+          "BookType": 0,
+          "Title": "How to be a lich",
+          "Author": "By Anonymous",
+          "PageText": [
+            "Step 1: Die",
+            "You should not be reading this because you are dead...\n"
+          ],
+          "CurrentPage": 1,
+          "ImageSize": {
+            "$type": "LogicSpawn.RPGMaker.Core.RPGVector2, Assembly-CSharp",
+            "X": 720.0,
+            "Y": 480.0
+          },
+          "Images": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+              "ImagePath": ""
+            }
+          ],
+          "AudioPath": null,
+          "ID": "4c206380-bd78-48d0-b7c4-918d3fb23789",
+          "InventoryRefID": null,
+          "Name": "Book",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 4,
+          "ImagePath": "RPGMakerAssets/upIcon",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "Pages": 2
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Book, Assembly-CSharp",
+          "BookType": 1,
+          "Title": "Concept Art",
+          "Author": "Your's Truly...",
+          "PageText": [
+            "Page 1"
+          ],
+          "CurrentPage": 0,
+          "ImageSize": {
+            "$type": "LogicSpawn.RPGMaker.Core.RPGVector2, Assembly-CSharp",
+            "X": 720.0,
+            "Y": 480.0
+          },
+          "Images": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+              "ImagePath": "MyAssets/humanPortrait"
+            }
+          ],
+          "AudioPath": null,
+          "ID": "c37246da-842b-4916-a176-2f91d07bc792",
+          "InventoryRefID": null,
+          "Name": "Picture Book",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 4,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "Pages": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Book, Assembly-CSharp",
+          "BookType": 2,
+          "Title": "My beautiful monologue",
+          "Author": "Caesar Augustus",
+          "PageText": [
+            "Page 1"
+          ],
+          "CurrentPage": 0,
+          "ImageSize": {
+            "$type": "LogicSpawn.RPGMaker.Core.RPGVector2, Assembly-CSharp",
+            "X": 720.0,
+            "Y": 480.0
+          },
+          "Images": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+              "ImagePath": ""
+            }
+          ],
+          "AudioPath": "Audio/DemoAudio/Sfx/dragongrowl2",
+          "ID": "45f35af4-b797-4c93-9315-8b072c2c8e14",
+          "InventoryRefID": null,
+          "Name": "Audio Book",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 4,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "Pages": 1
         }
       ]
     },
