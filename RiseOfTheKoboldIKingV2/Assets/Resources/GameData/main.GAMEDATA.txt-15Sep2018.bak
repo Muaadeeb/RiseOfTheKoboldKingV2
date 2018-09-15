@@ -243,7 +243,14 @@
     "TraitNameTitle": "Traits",
     "TraitDefinitions": [],
     "EnableElementalDamage": true,
-    "ElementalDamageDefinitions": [],
+    "ElementalDamageDefinitions": [
+      {
+        "$type": "LogicSpawn.RPGMaker.ElementalDamageDefinition, Assembly-CSharp",
+        "ID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+        "Name": "Fire Damage",
+        "Color": 9
+      }
+    ],
     "BaseNpcMovementSpeed": 2.0,
     "BaseMovementSpeed": 4.0,
     "UseStatForMovementSpeed": false,
@@ -1369,7 +1376,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 0.632926345,
+            "SavedFloatValue": 1.0,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1544,7 +1551,7 @@
     "EnableTauntSystem": true,
     "EnableFallDamage": false,
     "AggroRadius": 25.0,
-    "EnableFloatingCombatText": false,
+    "EnableFloatingCombatText": true,
     "FloatSpeed": 2.0,
     "FloatDuration": 1.5,
     "FloatDistBetweenVals": 0.3,
@@ -1769,7 +1776,14 @@
             "MinDamage": 15,
             "MaxDamage": 50,
             "CriticalChance": 0.0,
-            "ElementalDamages": [],
+            "ElementalDamages": [
+              {
+                "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                "MinDamage": 0,
+                "MaxDamage": 0
+              }
+            ],
             "SkillMetaID": null,
             "IsCritical": false
           },
@@ -2090,7 +2104,14 @@
             "MinDamage": 50,
             "MaxDamage": 100,
             "CriticalChance": 0.0,
-            "ElementalDamages": [],
+            "ElementalDamages": [
+              {
+                "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                "MinDamage": 0,
+                "MaxDamage": 0
+              }
+            ],
             "SkillMetaID": null,
             "IsCritical": false
           },
@@ -2576,7 +2597,14 @@
             "MinDamage": 1,
             "MaxDamage": 1,
             "CriticalChance": 0.0,
-            "ElementalDamages": [],
+            "ElementalDamages": [
+              {
+                "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                "MinDamage": 0,
+                "MaxDamage": 0
+              }
+            ],
             "SkillMetaID": null,
             "IsCritical": false
           },
@@ -3090,7 +3118,14 @@
             "MinDamage": 1,
             "MaxDamage": 1,
             "CriticalChance": 0.0,
-            "ElementalDamages": [],
+            "ElementalDamages": [
+              {
+                "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                "MinDamage": 0,
+                "MaxDamage": 0
+              }
+            ],
             "SkillMetaID": null,
             "IsCritical": false
           },
@@ -3746,7 +3781,245 @@
     },
     "Skills": {
       "$type": "LogicSpawn.RPGMaker.Core.SkillRepository, Assembly-CSharp",
-      "AllSkills": []
+      "AllSkills": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.ProjectileSkill, Assembly-CSharp",
+          "TravelSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "ProjectileSkillStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.ProjectileSkillStatistics, Assembly-CSharp",
+              "IsPiercing": false,
+              "NumberOfPierces": 1,
+              "PiercingScaling": [],
+              "Speed": 10.0,
+              "TimeTillDestroy": 3.0,
+              "AlwaysLockOn": false
+            }
+          ],
+          "Name": "Fireball",
+          "CurrentRank": 0,
+          "MaxRank": 1,
+          "MinCastRange": 0.0,
+          "CastRange": 20.0,
+          "AutomaticallyUnlockAtLevel": false,
+          "LevelToAutomaticallyUnlock": 1,
+          "EnemyOnlySkill": false,
+          "HasSkillMeta": false,
+          "SkillMetaID": "",
+          "Learnt": false,
+          "Unlocked": true,
+          "AllClasses": true,
+          "ClassIDs": [],
+          "SkillType": 1,
+          "PreviousSkillID": null,
+          "Image": {
+            "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+            "ImagePath": ""
+          },
+          "CastingSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "Sound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "ImpactSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "SkillStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillStatistics, Assembly-CSharp",
+              "Description": "Deals <color=red> 25-50 + ({Attr_Intelligence})</color> damage.\n\n<i>Deals fire damage in a fireball.</i>",
+              "ResourceRequiredId": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Effect": {
+                "$type": "LogicSpawn.RPGMaker.Core.TimedPassiveEffect, Assembly-CSharp",
+                "ID": "9ed63eeb-7b6d-449c-a8b3-af0f976e5b42",
+                "ActivePrefab": null,
+                "OnActivatePrefab": null,
+                "OnExpiredPrefab": null,
+                "CanBeCancelled": false,
+                "CancellingStatusEffectID": null,
+                "HasDuration": true,
+                "Duration": 10.0,
+                "AttributeBuffs": [],
+                "VitalBuffs": [],
+                "StatisticBuffs": [],
+                "VitalRegenBonuses": [],
+                "CustomVariableSetters": [],
+                "CustomVariableSettersOnDisable": [],
+                "StatusDurationReduction": [],
+                "RemoveStatusEffect": false,
+                "RemoveStatusEffectID": null,
+                "AddSkillImmunity": false,
+                "SkillImmunityID": null,
+                "AddSkillSusceptibility": false,
+                "SkillSusceptibilityID": null,
+                "SkillSusceptibilityAmount": 0.0,
+                "RunsEvent": false,
+                "RunEventID": null,
+                "HasProcEffect": false,
+                "ProcEffect": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                  "ProcCondition": 2,
+                  "Parameter": 1.0,
+                  "ParameterCounter": 0,
+                  "ProcEffectType": 3,
+                  "PullType": 0,
+                  "PullAllTheWay": true,
+                  "EffectParameter": 1.0,
+                  "EffectParameterString": null,
+                  "HasDuration": false,
+                  "Duration": 0.0
+                }
+              },
+              "CoolDownTime": 3.0,
+              "TotalCastTime": 2.0,
+              "CastingTime": 2.0,
+              "Damage": {
+                "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                "MinDamage": 0,
+                "MaxDamage": 0,
+                "CriticalChance": 0.0,
+                "ElementalDamages": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                    "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                    "MinDamage": 50,
+                    "MaxDamage": 100
+                  }
+                ],
+                "SkillMetaID": null,
+                "IsCritical": false
+              },
+              "BonusTaunt": 0,
+              "ResourceRequirement": 25,
+              "ReqTraitLevelToLevel": 0,
+              "SkillPointsToLevel": 100,
+              "LevelReqToLevel": 1,
+              "ApplyDOTOnHit": false,
+              "ChanceToApplyDOT": 0.0,
+              "DamageOverTime": {
+                "$type": "LogicSpawn.RPGMaker.Core.DamageOverTime, Assembly-CSharp",
+                "ID": "7268c31b-e326-4740-8dfe-9aafcfeaa15c",
+                "InstanceID": null,
+                "DoTName": "",
+                "HasDuration": true,
+                "Duration": 1.0,
+                "TimeBetweenTick": 1.0,
+                "DamagePerTick": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                  "MinDamage": 0,
+                  "MaxDamage": 0,
+                  "CriticalChance": 0.0,
+                  "ElementalDamages": [],
+                  "SkillMetaID": null,
+                  "IsCritical": false
+                },
+                "IntervalTimer": 0.0,
+                "SkillMetaID": null,
+                "ActivePrefab": null,
+                "DamageTickPrefab": null,
+                "OnExpiredPrefab": null,
+                "OnActivatePrefab": null
+              },
+              "ResourceAddedAmount": 0,
+              "RemoveStatusEffect": false,
+              "ChanceToRemoveStatusEffect": 1.0,
+              "RemoveStatusEffectID": "",
+              "ApplyStatusEffect": false,
+              "ApplyStatusEffectWithDuration": true,
+              "ApplyStatusEffectDuration": 5.0,
+              "ChanceToApplyStatusEffect": 1.0,
+              "StatusEffectID": "",
+              "HasProcEffect": true,
+              "ProcEffect": {
+                "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                "ProcCondition": 2,
+                "Parameter": 1.0,
+                "ParameterCounter": 0,
+                "ProcEffectType": 3,
+                "PullType": 0,
+                "PullAllTheWay": true,
+                "EffectParameter": 1.0,
+                "EffectParameterString": null,
+                "HasDuration": false,
+                "Duration": 0.0
+              },
+              "HasDuration": true,
+              "SpawnForTime": 10.0,
+              "LimitSpawnInstances": true,
+              "MaxInstances": 1,
+              "RunEventOnHit": false,
+              "EventOnHitID": "",
+              "GivePlayerItem": false,
+              "ItemToGiveID": "",
+              "ItemToGiveAmount": 0,
+              "VitalConditionParamater": 0.0
+            }
+          ],
+          "OnlyRequireOneSkill": false,
+          "RequiredSkills": [],
+          "AppliesBuffDebuff": false,
+          "DamageScalingTreeID": "bef1f4cb-69bc-4ae4-8428-a28aabe7537b",
+          "UseResourceOnCast": true,
+          "ResourceIDUsed": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+          "AddResourceOnCast": false,
+          "ResourceAddedID": null,
+          "UseEventOnCast": false,
+          "EventOnCastID": null,
+          "TargetType": 4,
+          "UpgradeType": 1,
+          "TraitIDToLevel": null,
+          "CastPrefabPath": "",
+          "CastingPrefabPath": "",
+          "LandPrefab": null,
+          "MovingToPrefab": null,
+          "PrefabPath": "",
+          "ImpactPrefabPath": "",
+          "AnimationsToUse": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillAnimationDefinition, Assembly-CSharp",
+              "ClassID": "e629e8c3-cf8d-4363-b906-2506258c0fda",
+              "LegacyAnim": null,
+              "CastingLegacyAnim": null,
+              "ApproachLegacyAnim": null,
+              "LandLegacyAnim": null,
+              "CastSkillAnimSet": 1,
+              "CastAnimNumber": 0,
+              "CastingSkillAnimSet": 1,
+              "CastingAnimNumber": 1,
+              "ApproachSkillAnimSet": 0,
+              "ApproachAnimNumber": 0,
+              "LandSkillAnimSet": 0,
+              "LandAnimNumber": 0
+            }
+          ],
+          "CurrentCoolDownTime": 0.0,
+          "TimesUsed": 0,
+          "RequireVitalBelowX": false,
+          "RequireVitalAboveX": false,
+          "RequiredVitalId": null,
+          "RequireEquippedWep": false,
+          "RequiredEquippedWepTypeID": "",
+          "AlwaysRequireTarget": false,
+          "MovementType": 0,
+          "MoveToSpeed": 25.0,
+          "JumpToHeight": 5.0,
+          "LandTime": 0.1,
+          "MaxComboTime": 0.0,
+          "ReqPrevSkillInCombo": false,
+          "CurrentComboTime": 0.0,
+          "PrevSkillForComboID": null,
+          "ID": "bef1f4cb-69bc-4ae4-8428-a28aabe7537b",
+          "IsMaxxedOut": true,
+          "OffCooldown": true
+        }
+      ]
     },
     "StatusEffects": {
       "$type": "LogicSpawn.RPGMaker.Core.StatusEffectRepository, Assembly-CSharp",
@@ -4056,6 +4329,19 @@
               "ObjectValue": null,
               "DefaultValue": 0,
               "PropType": 3
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.NodeTreeVar, Assembly-CSharp",
+              "ID": "DamageDealtVar_0c5a9353-7141-453a-a48c-580ca467d65c",
+              "Name": "Fire Damage",
+              "FloatValue": 0.0,
+              "StringValue": "",
+              "IntValue": 0,
+              "BoolValue": false,
+              "IsList": false,
+              "ObjectValue": null,
+              "DefaultValue": 0,
+              "PropType": 3
             }
           ]
         },
@@ -4109,6 +4395,64 @@
               },
               "WindowID": 1,
               "Identifier": "MAX_Physical",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Fire Damage",
+              "NewDescription": "Damage dealt by an element starts at 0. You can add additional calculations to increase this amount. Example: Create a statistic called fire damage and add this amount.",
+              "NewSubText": "Damage for Fire Damage",
+              "ReturnType": 0,
+              "ID": "26879688-0ffd-4498-998d-0ea85aa351ce",
+              "NodeChainName": "MIN [Fire Damage] Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 250.0,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 11,
+              "Identifier": "MIN_0c5a9353-7141-453a-a48c-580ca467d65c",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Fire Damage",
+              "NewDescription": "Damage dealt by an element starts at 0. You can add additional calculations to increase this amount. Example: Create a statistic called fire damage and add this amount.",
+              "NewSubText": "Damage for Fire Damage",
+              "ReturnType": 0,
+              "ID": "73451c4c-e5d7-42b7-a0c7-870d22b06ed6",
+              "NodeChainName": "MAX [Fire Damage] Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 350.0,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 12,
+              "Identifier": "MAX_0c5a9353-7141-453a-a48c-580ca467d65c",
               "Target": 0,
               "PrevNodeLinks": [],
               "NextNodeLinks": [
@@ -4380,6 +4724,326 @@
             {
               "$type": "LogicSpawn.RPGMaker.Core.NodeTreeVar, Assembly-CSharp",
               "ID": "76735813-0b32-40e6-a078-eeb2349869e1",
+              "Name": "Attacker",
+              "FloatValue": 0.0,
+              "StringValue": "",
+              "IntValue": 0,
+              "BoolValue": false,
+              "IsList": false,
+              "ObjectValue": null,
+              "DefaultValue": null,
+              "PropType": 32
+            }
+          ]
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.NodeTree, Assembly-CSharp",
+          "Name": "Fireball",
+          "Nodes": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Min Physical Damage",
+              "NewDescription": "Physical Damage represents weapon damage, or base combatant damage. You can then add additional nodes to add onto this value. Example: Add 10x Strength",
+              "NewSubText": "Start node for dealt physical",
+              "ReturnType": 0,
+              "ID": "212a3c6e-8d9e-419d-8892-84c2da6a29c4",
+              "NodeChainName": "Min Physical Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 87.5,
+                "Width": 150.0,
+                "Height": 82.0
+              },
+              "WindowID": 0,
+              "Identifier": "MIN_Physical",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Max Physical Damage",
+              "NewDescription": "Physical Damage represents weapon damage, or base combatant damage. You can then add additional nodes to add onto this value. Example: Add 10x Strength",
+              "NewSubText": "Start node for dealt physical",
+              "ReturnType": 0,
+              "ID": "3869b853-9cae-40e6-8d0d-6dc5d17cb228",
+              "NodeChainName": "Max Physical Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 27.0,
+                "Y": 418.5,
+                "Width": 150.0,
+                "Height": 82.0
+              },
+              "WindowID": 1,
+              "Identifier": "MAX_Physical",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Fire Damage",
+              "NewDescription": "Damage dealt by an element starts at 0. You can add additional calculations to increase this amount. Example: Create a statistic called fire damage and add this amount.",
+              "NewSubText": "Damage for Fire Damage",
+              "ReturnType": 0,
+              "ID": "9851855b-0655-4387-a103-31f181e32baa",
+              "NodeChainName": "MIN [Fire Damage] Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 459.0,
+                "Y": 284.0,
+                "Width": 132.0,
+                "Height": 82.0
+              },
+              "WindowID": 13,
+              "Identifier": "MIN_0c5a9353-7141-453a-a48c-580ca467d65c",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "6a9b78e1-3947-40e0-b489-b6166340a090"
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Fire Damage",
+              "NewDescription": "Damage dealt by an element starts at 0. You can add additional calculations to increase this amount. Example: Create a statistic called fire damage and add this amount.",
+              "NewSubText": "Damage for Fire Damage",
+              "ReturnType": 0,
+              "ID": "f3a90bac-adbd-41d7-805a-42a74c5c3458",
+              "NodeChainName": "MAX [Fire Damage] Damage",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 450.0,
+                "Y": 509.0,
+                "Width": 132.0,
+                "Height": 82.0
+              },
+              "WindowID": 14,
+              "Identifier": "MAX_0c5a9353-7141-453a-a48c-580ca467d65c",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "6a9b78e1-3947-40e0-b489-b6166340a090"
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AddIntNode, Assembly-CSharp",
+              "ID": "6a9b78e1-3947-40e0-b489-b6166340a090",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 765.0,
+                "Y": 356.0,
+                "Width": 228.0,
+                "Height": 124.0
+              },
+              "WindowID": 15,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "9851855b-0655-4387-a103-31f181e32baa"
+                },
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "f3a90bac-adbd-41d7-805a-42a74c5c3458"
+                }
+              ],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib",
+                "Value": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Value",
+                  "PropertyType": 3,
+                  "PropertyFamily": 0,
+                  "Source": 2,
+                  "Property": null,
+                  "Value": 0,
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": "a44079f3-4454-4b30-ba9f-421b00ba11b1"
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                },
+                "Target": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Target",
+                  "PropertyType": 3,
+                  "PropertyFamily": 0,
+                  "Source": 2,
+                  "Property": null,
+                  "Value": 0,
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": "76f83772-3285-4ee0-a58b-51daecae9168"
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                }
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.NodeChainIntNode, Assembly-CSharp",
+              "InheritedPropertyType": 44,
+              "ID": "76f83772-3285-4ee0-a58b-51daecae9168",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 594.0,
+                "Y": 533.0,
+                "Width": 138.0,
+                "Height": 47.0
+              },
+              "PropertyType": 3,
+              "WindowID": 16,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": null
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AttackerCombatNode, Assembly-CSharp",
+              "InheritedPropertyType": 32,
+              "ID": "70f618cf-b11d-4b46-8f51-d1c8d624dbfc",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 310.0,
+                "Y": 426.0,
+                "Width": 86.0,
+                "Height": 47.0
+              },
+              "PropertyType": 32,
+              "WindowID": 17,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": null
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.GetAttributeTotal, Assembly-CSharp",
+              "InheritedPropertyType": 44,
+              "ID": "a44079f3-4454-4b30-ba9f-421b00ba11b1",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 479.0,
+                "Y": 384.0,
+                "Width": 161.0,
+                "Height": 89.0
+              },
+              "PropertyFamily": 0,
+              "PropertyType": 3,
+              "WindowID": 18,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": null
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib",
+                "Combatant": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Combatant",
+                  "PropertyType": 32,
+                  "PropertyFamily": 1,
+                  "Source": 0,
+                  "Property": null,
+                  "Value": "",
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": "70f618cf-b11d-4b46-8f51-d1c8d624dbfc"
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                },
+                "Attribute": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Attribute",
+                  "PropertyType": 8,
+                  "PropertyFamily": 1,
+                  "Source": 2,
+                  "Property": null,
+                  "Value": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": ""
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                }
+              }
+            }
+          ],
+          "ID": "bef1f4cb-69bc-4ae4-8428-a28aabe7537b",
+          "Required": false,
+          "Type": 0,
+          "Variables": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.NodeTreeVar, Assembly-CSharp",
+              "ID": "e73ad3ab-3f42-4d32-b691-eed9bdab67b6",
               "Name": "Attacker",
               "FloatValue": 0.0,
               "StringValue": "",
