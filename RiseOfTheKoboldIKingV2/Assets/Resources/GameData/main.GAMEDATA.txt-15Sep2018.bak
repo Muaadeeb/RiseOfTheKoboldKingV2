@@ -81,6 +81,17 @@
       },
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
+        "Name": "Constitution",
+        "Description": "How much health and Fortitude you have",
+        "DefaultValue": 10,
+        "ID": "2d5bfeb5-a07e-422d-9afe-ab8cc305bb05",
+        "Color": 0,
+        "HasMaxValue": false,
+        "MaxValue": 0,
+        "ImagePath": null
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
         "Name": "Dexterity",
         "Description": "How stealthy, agile, and hard to hit you are.",
         "DefaultValue": 10,
@@ -1125,6 +1136,11 @@
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
             "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "2d5bfeb5-a07e-422d-9afe-ab8cc305bb05",
+            "Amount": 1
           }
         ],
         "StartingStats": [
@@ -2691,6 +2707,18 @@
               "MaxValue": 0,
               "Color": 0,
               "TotalValue": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "2d5bfeb5-a07e-422d-9afe-ab8cc305bb05",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
             }
           ],
           "Vitals": [
@@ -3204,6 +3232,18 @@
             {
               "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
               "ID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "2d5bfeb5-a07e-422d-9afe-ab8cc305bb05",
               "BaseValue": 1,
               "EquipValue": 0,
               "SkillValue": 0,
@@ -3979,7 +4019,7 @@
           "CastingPrefabPath": "",
           "LandPrefab": null,
           "MovingToPrefab": null,
-          "PrefabPath": "",
+          "PrefabPath": "RPGAIOPrefabRepository/Skill_Prefab_4",
           "ImpactPrefabPath": "",
           "AnimationsToUse": [
             {
@@ -4016,6 +4056,745 @@
           "CurrentComboTime": 0.0,
           "PrevSkillForComboID": null,
           "ID": "bef1f4cb-69bc-4ae4-8428-a28aabe7537b",
+          "IsMaxxedOut": true,
+          "OffCooldown": true
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.AreaOfEffectSkill, Assembly-CSharp",
+          "HitMultipleTimes": true,
+          "DelayBetweenHits": 0.1,
+          "Shape": 0,
+          "TimeTillDestroy": [
+            3.0
+          ],
+          "WidthStatistics": [
+            2.0
+          ],
+          "LengthStatistics": [
+            2.0
+          ],
+          "HeightStatistics": [
+            1.0
+          ],
+          "Name": "Fire of Holy Judgement",
+          "CurrentRank": 0,
+          "MaxRank": 1,
+          "MinCastRange": 0.0,
+          "CastRange": 5.0,
+          "AutomaticallyUnlockAtLevel": false,
+          "LevelToAutomaticallyUnlock": 1,
+          "EnemyOnlySkill": false,
+          "HasSkillMeta": false,
+          "SkillMetaID": "",
+          "Learnt": false,
+          "Unlocked": true,
+          "AllClasses": true,
+          "ClassIDs": [],
+          "SkillType": 0,
+          "PreviousSkillID": null,
+          "Image": {
+            "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+            "ImagePath": "RPGMakerAssets/ToolbarIcons/achievementIcon"
+          },
+          "CastingSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "Sound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "ImpactSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "SkillStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillStatistics, Assembly-CSharp",
+              "Description": "",
+              "ResourceRequiredId": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Effect": {
+                "$type": "LogicSpawn.RPGMaker.Core.TimedPassiveEffect, Assembly-CSharp",
+                "ID": "4cb27174-91f2-42b7-8c40-f315c63b9799",
+                "ActivePrefab": null,
+                "OnActivatePrefab": null,
+                "OnExpiredPrefab": null,
+                "CanBeCancelled": false,
+                "CancellingStatusEffectID": null,
+                "HasDuration": true,
+                "Duration": 10.0,
+                "AttributeBuffs": [],
+                "VitalBuffs": [],
+                "StatisticBuffs": [],
+                "VitalRegenBonuses": [],
+                "CustomVariableSetters": [],
+                "CustomVariableSettersOnDisable": [],
+                "StatusDurationReduction": [],
+                "RemoveStatusEffect": false,
+                "RemoveStatusEffectID": null,
+                "AddSkillImmunity": false,
+                "SkillImmunityID": null,
+                "AddSkillSusceptibility": false,
+                "SkillSusceptibilityID": null,
+                "SkillSusceptibilityAmount": 0.0,
+                "RunsEvent": false,
+                "RunEventID": null,
+                "HasProcEffect": false,
+                "ProcEffect": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                  "ProcCondition": 2,
+                  "Parameter": 1.0,
+                  "ParameterCounter": 0,
+                  "ProcEffectType": 3,
+                  "PullType": 0,
+                  "PullAllTheWay": true,
+                  "EffectParameter": 1.0,
+                  "EffectParameterString": null,
+                  "HasDuration": false,
+                  "Duration": 0.0
+                }
+              },
+              "CoolDownTime": 1.0,
+              "TotalCastTime": 0.0,
+              "CastingTime": 0.0,
+              "Damage": {
+                "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                "MinDamage": 0,
+                "MaxDamage": 0,
+                "CriticalChance": 0.0,
+                "ElementalDamages": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                    "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                    "MinDamage": 2,
+                    "MaxDamage": 5
+                  }
+                ],
+                "SkillMetaID": null,
+                "IsCritical": false
+              },
+              "BonusTaunt": 0,
+              "ResourceRequirement": 0,
+              "ReqTraitLevelToLevel": 0,
+              "SkillPointsToLevel": 1,
+              "LevelReqToLevel": 1,
+              "ApplyDOTOnHit": false,
+              "ChanceToApplyDOT": 0.0,
+              "DamageOverTime": {
+                "$type": "LogicSpawn.RPGMaker.Core.DamageOverTime, Assembly-CSharp",
+                "ID": "341c8dbe-0fd3-4abc-9f97-0aa6723f400d",
+                "InstanceID": null,
+                "DoTName": "",
+                "HasDuration": true,
+                "Duration": 1.0,
+                "TimeBetweenTick": 1.0,
+                "DamagePerTick": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                  "MinDamage": 0,
+                  "MaxDamage": 0,
+                  "CriticalChance": 0.0,
+                  "ElementalDamages": [
+                    {
+                      "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                      "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                      "MinDamage": 0,
+                      "MaxDamage": 0
+                    }
+                  ],
+                  "SkillMetaID": null,
+                  "IsCritical": false
+                },
+                "IntervalTimer": 0.0,
+                "SkillMetaID": null,
+                "ActivePrefab": null,
+                "DamageTickPrefab": null,
+                "OnExpiredPrefab": null,
+                "OnActivatePrefab": null
+              },
+              "ResourceAddedAmount": 0,
+              "RemoveStatusEffect": false,
+              "ChanceToRemoveStatusEffect": 1.0,
+              "RemoveStatusEffectID": "",
+              "ApplyStatusEffect": false,
+              "ApplyStatusEffectWithDuration": true,
+              "ApplyStatusEffectDuration": 5.0,
+              "ChanceToApplyStatusEffect": 1.0,
+              "StatusEffectID": "",
+              "HasProcEffect": false,
+              "ProcEffect": {
+                "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                "ProcCondition": 2,
+                "Parameter": 1.0,
+                "ParameterCounter": 0,
+                "ProcEffectType": 3,
+                "PullType": 0,
+                "PullAllTheWay": true,
+                "EffectParameter": 1.0,
+                "EffectParameterString": null,
+                "HasDuration": false,
+                "Duration": 0.0
+              },
+              "HasDuration": true,
+              "SpawnForTime": 10.0,
+              "LimitSpawnInstances": true,
+              "MaxInstances": 1,
+              "RunEventOnHit": false,
+              "EventOnHitID": "",
+              "GivePlayerItem": false,
+              "ItemToGiveID": "",
+              "ItemToGiveAmount": 0,
+              "VitalConditionParamater": 0.0
+            }
+          ],
+          "OnlyRequireOneSkill": false,
+          "RequiredSkills": [],
+          "AppliesBuffDebuff": false,
+          "DamageScalingTreeID": null,
+          "UseResourceOnCast": true,
+          "ResourceIDUsed": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+          "AddResourceOnCast": false,
+          "ResourceAddedID": null,
+          "UseEventOnCast": false,
+          "EventOnCastID": null,
+          "TargetType": 4,
+          "UpgradeType": 1,
+          "TraitIDToLevel": null,
+          "CastPrefabPath": "",
+          "CastingPrefabPath": "",
+          "LandPrefab": null,
+          "MovingToPrefab": null,
+          "PrefabPath": "RPGAIOPrefabRepository/Skill_Prefab_3",
+          "ImpactPrefabPath": "",
+          "AnimationsToUse": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillAnimationDefinition, Assembly-CSharp",
+              "ClassID": "e629e8c3-cf8d-4363-b906-2506258c0fda",
+              "LegacyAnim": null,
+              "CastingLegacyAnim": null,
+              "ApproachLegacyAnim": null,
+              "LandLegacyAnim": null,
+              "CastSkillAnimSet": 1,
+              "CastAnimNumber": 0,
+              "CastingSkillAnimSet": 1,
+              "CastingAnimNumber": 1,
+              "ApproachSkillAnimSet": 0,
+              "ApproachAnimNumber": 0,
+              "LandSkillAnimSet": 0,
+              "LandAnimNumber": 0
+            }
+          ],
+          "CurrentCoolDownTime": 0.0,
+          "TimesUsed": 0,
+          "RequireVitalBelowX": false,
+          "RequireVitalAboveX": false,
+          "RequiredVitalId": null,
+          "RequireEquippedWep": false,
+          "RequiredEquippedWepTypeID": "",
+          "AlwaysRequireTarget": false,
+          "MovementType": 0,
+          "MoveToSpeed": 25.0,
+          "JumpToHeight": 5.0,
+          "LandTime": 0.1,
+          "MaxComboTime": 0.0,
+          "ReqPrevSkillInCombo": false,
+          "CurrentComboTime": 0.0,
+          "PrevSkillForComboID": null,
+          "ID": "f2eae2e0-414e-498e-ab08-f99c5daf6cb5",
+          "IsMaxxedOut": true,
+          "OffCooldown": true
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.RestorationSkill, Assembly-CSharp",
+          "RestorationEffects": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+              "RestorationType": 0,
+              "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+              "FixedRestore": true,
+              "AmountToRestore": 100,
+              "PercentToRestore": 0.0,
+              "SecBetweenRestore": 0.0,
+              "Duration": 1.0,
+              "IntervalTimer": 0.0,
+              "SkillMetaId": null
+            }
+          ],
+          "Name": "Healing",
+          "CurrentRank": 0,
+          "MaxRank": 1,
+          "MinCastRange": 0.0,
+          "CastRange": 5.0,
+          "AutomaticallyUnlockAtLevel": false,
+          "LevelToAutomaticallyUnlock": 1,
+          "EnemyOnlySkill": false,
+          "HasSkillMeta": false,
+          "SkillMetaID": "",
+          "Learnt": false,
+          "Unlocked": true,
+          "AllClasses": true,
+          "ClassIDs": [],
+          "SkillType": 4,
+          "PreviousSkillID": null,
+          "Image": {
+            "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+            "ImagePath": "RPGMakerAssets/addIcon"
+          },
+          "CastingSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "Sound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "ImpactSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "SkillStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillStatistics, Assembly-CSharp",
+              "Description": "",
+              "ResourceRequiredId": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Effect": {
+                "$type": "LogicSpawn.RPGMaker.Core.TimedPassiveEffect, Assembly-CSharp",
+                "ID": "b0bac915-7431-4c67-8ad4-908dc6bd0bd9",
+                "ActivePrefab": null,
+                "OnActivatePrefab": null,
+                "OnExpiredPrefab": null,
+                "CanBeCancelled": false,
+                "CancellingStatusEffectID": null,
+                "HasDuration": true,
+                "Duration": 10.0,
+                "AttributeBuffs": [],
+                "VitalBuffs": [],
+                "StatisticBuffs": [],
+                "VitalRegenBonuses": [],
+                "CustomVariableSetters": [],
+                "CustomVariableSettersOnDisable": [],
+                "StatusDurationReduction": [],
+                "RemoveStatusEffect": false,
+                "RemoveStatusEffectID": null,
+                "AddSkillImmunity": false,
+                "SkillImmunityID": null,
+                "AddSkillSusceptibility": false,
+                "SkillSusceptibilityID": null,
+                "SkillSusceptibilityAmount": 0.0,
+                "RunsEvent": false,
+                "RunEventID": null,
+                "HasProcEffect": false,
+                "ProcEffect": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                  "ProcCondition": 2,
+                  "Parameter": 1.0,
+                  "ParameterCounter": 0,
+                  "ProcEffectType": 3,
+                  "PullType": 0,
+                  "PullAllTheWay": true,
+                  "EffectParameter": 1.0,
+                  "EffectParameterString": null,
+                  "HasDuration": false,
+                  "Duration": 0.0
+                }
+              },
+              "CoolDownTime": 1.0,
+              "TotalCastTime": 0.0,
+              "CastingTime": 0.0,
+              "Damage": {
+                "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                "MinDamage": 0,
+                "MaxDamage": 0,
+                "CriticalChance": 0.0,
+                "ElementalDamages": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                    "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                    "MinDamage": 0,
+                    "MaxDamage": 0
+                  }
+                ],
+                "SkillMetaID": null,
+                "IsCritical": false
+              },
+              "BonusTaunt": 0,
+              "ResourceRequirement": 0,
+              "ReqTraitLevelToLevel": 0,
+              "SkillPointsToLevel": 1,
+              "LevelReqToLevel": 1,
+              "ApplyDOTOnHit": false,
+              "ChanceToApplyDOT": 0.0,
+              "DamageOverTime": {
+                "$type": "LogicSpawn.RPGMaker.Core.DamageOverTime, Assembly-CSharp",
+                "ID": "d51379eb-95c3-4f11-904e-10742081ed25",
+                "InstanceID": null,
+                "DoTName": "",
+                "HasDuration": true,
+                "Duration": 1.0,
+                "TimeBetweenTick": 1.0,
+                "DamagePerTick": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                  "MinDamage": 0,
+                  "MaxDamage": 0,
+                  "CriticalChance": 0.0,
+                  "ElementalDamages": [
+                    {
+                      "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                      "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                      "MinDamage": 0,
+                      "MaxDamage": 0
+                    }
+                  ],
+                  "SkillMetaID": null,
+                  "IsCritical": false
+                },
+                "IntervalTimer": 0.0,
+                "SkillMetaID": null,
+                "ActivePrefab": null,
+                "DamageTickPrefab": null,
+                "OnExpiredPrefab": null,
+                "OnActivatePrefab": null
+              },
+              "ResourceAddedAmount": 0,
+              "RemoveStatusEffect": false,
+              "ChanceToRemoveStatusEffect": 1.0,
+              "RemoveStatusEffectID": "",
+              "ApplyStatusEffect": false,
+              "ApplyStatusEffectWithDuration": true,
+              "ApplyStatusEffectDuration": 5.0,
+              "ChanceToApplyStatusEffect": 1.0,
+              "StatusEffectID": "",
+              "HasProcEffect": false,
+              "ProcEffect": {
+                "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                "ProcCondition": 2,
+                "Parameter": 1.0,
+                "ParameterCounter": 0,
+                "ProcEffectType": 3,
+                "PullType": 0,
+                "PullAllTheWay": true,
+                "EffectParameter": 1.0,
+                "EffectParameterString": null,
+                "HasDuration": false,
+                "Duration": 0.0
+              },
+              "HasDuration": true,
+              "SpawnForTime": 10.0,
+              "LimitSpawnInstances": true,
+              "MaxInstances": 1,
+              "RunEventOnHit": false,
+              "EventOnHitID": "",
+              "GivePlayerItem": false,
+              "ItemToGiveID": "",
+              "ItemToGiveAmount": 0,
+              "VitalConditionParamater": 0.0
+            }
+          ],
+          "OnlyRequireOneSkill": false,
+          "RequiredSkills": [],
+          "AppliesBuffDebuff": false,
+          "DamageScalingTreeID": null,
+          "UseResourceOnCast": true,
+          "ResourceIDUsed": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+          "AddResourceOnCast": false,
+          "ResourceAddedID": null,
+          "UseEventOnCast": false,
+          "EventOnCastID": null,
+          "TargetType": 0,
+          "UpgradeType": 1,
+          "TraitIDToLevel": null,
+          "CastPrefabPath": "",
+          "CastingPrefabPath": "",
+          "LandPrefab": null,
+          "MovingToPrefab": null,
+          "PrefabPath": null,
+          "ImpactPrefabPath": "",
+          "AnimationsToUse": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillAnimationDefinition, Assembly-CSharp",
+              "ClassID": "e629e8c3-cf8d-4363-b906-2506258c0fda",
+              "LegacyAnim": null,
+              "CastingLegacyAnim": null,
+              "ApproachLegacyAnim": null,
+              "LandLegacyAnim": null,
+              "CastSkillAnimSet": 1,
+              "CastAnimNumber": 0,
+              "CastingSkillAnimSet": 1,
+              "CastingAnimNumber": 1,
+              "ApproachSkillAnimSet": 0,
+              "ApproachAnimNumber": 0,
+              "LandSkillAnimSet": 0,
+              "LandAnimNumber": 0
+            }
+          ],
+          "CurrentCoolDownTime": 0.0,
+          "TimesUsed": 0,
+          "RequireVitalBelowX": false,
+          "RequireVitalAboveX": false,
+          "RequiredVitalId": null,
+          "RequireEquippedWep": false,
+          "RequiredEquippedWepTypeID": "",
+          "AlwaysRequireTarget": false,
+          "MovementType": 0,
+          "MoveToSpeed": 25.0,
+          "JumpToHeight": 5.0,
+          "LandTime": 0.1,
+          "MaxComboTime": 0.0,
+          "ReqPrevSkillInCombo": false,
+          "CurrentComboTime": 0.0,
+          "PrevSkillForComboID": null,
+          "ID": "3b8416bb-1f87-4e0c-8214-1857fd8916f1",
+          "IsMaxxedOut": true,
+          "OffCooldown": true
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.AuraSkill, Assembly-CSharp",
+          "AuraEffectStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.AuraEffect, Assembly-CSharp",
+              "SkillId": "ff243574-41a1-4b39-a345-036caaad0fae",
+              "TakeResourceAmountPerSec": false,
+              "ResourcePerSecTimer": 0.0,
+              "ApplyToAllies": true,
+              "Radius": 5.0,
+              "AuraEffectStats": null
+            }
+          ],
+          "Name": "Defensive Aura",
+          "CurrentRank": 0,
+          "MaxRank": 1,
+          "MinCastRange": 0.0,
+          "CastRange": 5.0,
+          "AutomaticallyUnlockAtLevel": false,
+          "LevelToAutomaticallyUnlock": 1,
+          "EnemyOnlySkill": false,
+          "HasSkillMeta": false,
+          "SkillMetaID": "",
+          "Learnt": false,
+          "Unlocked": true,
+          "AllClasses": true,
+          "ClassIDs": [],
+          "SkillType": 2,
+          "PreviousSkillID": null,
+          "Image": {
+            "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+            "ImagePath": "RPGMakerAssets/ToolbarIcons/combatIcon"
+          },
+          "CastingSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "Sound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "ImpactSound": {
+            "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+            "AudioPath": ""
+          },
+          "SkillStatistics": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillStatistics, Assembly-CSharp",
+              "Description": "",
+              "ResourceRequiredId": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Effect": {
+                "$type": "LogicSpawn.RPGMaker.Core.TimedPassiveEffect, Assembly-CSharp",
+                "ID": "a85b2ac1-a070-48f9-bd19-0123cca4c865",
+                "ActivePrefab": "",
+                "OnActivatePrefab": "",
+                "OnExpiredPrefab": "",
+                "CanBeCancelled": false,
+                "CancellingStatusEffectID": null,
+                "HasDuration": true,
+                "Duration": 10.0,
+                "AttributeBuffs": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.AttributeBuff, Assembly-CSharp",
+                    "AttributeID": "2d5bfeb5-a07e-422d-9afe-ab8cc305bb05",
+                    "Amount": 10
+                  }
+                ],
+                "VitalBuffs": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.VitalBuff, Assembly-CSharp",
+                    "VitalID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+                    "Amount": 100
+                  }
+                ],
+                "StatisticBuffs": [],
+                "VitalRegenBonuses": [],
+                "CustomVariableSetters": [],
+                "CustomVariableSettersOnDisable": [],
+                "StatusDurationReduction": [],
+                "RemoveStatusEffect": false,
+                "RemoveStatusEffectID": null,
+                "AddSkillImmunity": false,
+                "SkillImmunityID": null,
+                "AddSkillSusceptibility": false,
+                "SkillSusceptibilityID": null,
+                "SkillSusceptibilityAmount": 0.0,
+                "RunsEvent": false,
+                "RunEventID": null,
+                "HasProcEffect": false,
+                "ProcEffect": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                  "ProcCondition": 2,
+                  "Parameter": 1.0,
+                  "ParameterCounter": 0,
+                  "ProcEffectType": 3,
+                  "PullType": 0,
+                  "PullAllTheWay": true,
+                  "EffectParameter": 1.0,
+                  "EffectParameterString": null,
+                  "HasDuration": false,
+                  "Duration": 0.0
+                }
+              },
+              "CoolDownTime": 1.0,
+              "TotalCastTime": 0.0,
+              "CastingTime": 0.0,
+              "Damage": {
+                "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                "MinDamage": 0,
+                "MaxDamage": 0,
+                "CriticalChance": 0.0,
+                "ElementalDamages": [
+                  {
+                    "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                    "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                    "MinDamage": 0,
+                    "MaxDamage": 0
+                  }
+                ],
+                "SkillMetaID": null,
+                "IsCritical": false
+              },
+              "BonusTaunt": 0,
+              "ResourceRequirement": 0,
+              "ReqTraitLevelToLevel": 0,
+              "SkillPointsToLevel": 1,
+              "LevelReqToLevel": 1,
+              "ApplyDOTOnHit": false,
+              "ChanceToApplyDOT": 0.0,
+              "DamageOverTime": {
+                "$type": "LogicSpawn.RPGMaker.Core.DamageOverTime, Assembly-CSharp",
+                "ID": "d596ed2f-577f-4fce-8826-8f3a7beb6fbf",
+                "InstanceID": null,
+                "DoTName": "",
+                "HasDuration": true,
+                "Duration": 1.0,
+                "TimeBetweenTick": 1.0,
+                "DamagePerTick": {
+                  "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
+                  "MinDamage": 0,
+                  "MaxDamage": 0,
+                  "CriticalChance": 0.0,
+                  "ElementalDamages": [
+                    {
+                      "$type": "LogicSpawn.RPGMaker.Core.ElementalDamage, Assembly-CSharp",
+                      "ElementID": "0c5a9353-7141-453a-a48c-580ca467d65c",
+                      "MinDamage": 0,
+                      "MaxDamage": 0
+                    }
+                  ],
+                  "SkillMetaID": null,
+                  "IsCritical": false
+                },
+                "IntervalTimer": 0.0,
+                "SkillMetaID": null,
+                "ActivePrefab": null,
+                "DamageTickPrefab": null,
+                "OnExpiredPrefab": null,
+                "OnActivatePrefab": null
+              },
+              "ResourceAddedAmount": 0,
+              "RemoveStatusEffect": false,
+              "ChanceToRemoveStatusEffect": 1.0,
+              "RemoveStatusEffectID": "",
+              "ApplyStatusEffect": false,
+              "ApplyStatusEffectWithDuration": true,
+              "ApplyStatusEffectDuration": 5.0,
+              "ChanceToApplyStatusEffect": 1.0,
+              "StatusEffectID": "",
+              "HasProcEffect": false,
+              "ProcEffect": {
+                "$type": "LogicSpawn.RPGMaker.Core.Rm_ProcEffect, Assembly-CSharp",
+                "ProcCondition": 2,
+                "Parameter": 1.0,
+                "ParameterCounter": 0,
+                "ProcEffectType": 3,
+                "PullType": 0,
+                "PullAllTheWay": true,
+                "EffectParameter": 1.0,
+                "EffectParameterString": null,
+                "HasDuration": false,
+                "Duration": 0.0
+              },
+              "HasDuration": true,
+              "SpawnForTime": 10.0,
+              "LimitSpawnInstances": true,
+              "MaxInstances": 1,
+              "RunEventOnHit": false,
+              "EventOnHitID": "",
+              "GivePlayerItem": false,
+              "ItemToGiveID": "",
+              "ItemToGiveAmount": 0,
+              "VitalConditionParamater": 0.0
+            }
+          ],
+          "OnlyRequireOneSkill": false,
+          "RequiredSkills": [],
+          "AppliesBuffDebuff": false,
+          "DamageScalingTreeID": null,
+          "UseResourceOnCast": true,
+          "ResourceIDUsed": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+          "AddResourceOnCast": false,
+          "ResourceAddedID": null,
+          "UseEventOnCast": false,
+          "EventOnCastID": null,
+          "TargetType": 0,
+          "UpgradeType": 1,
+          "TraitIDToLevel": null,
+          "CastPrefabPath": "",
+          "CastingPrefabPath": "",
+          "LandPrefab": null,
+          "MovingToPrefab": null,
+          "PrefabPath": null,
+          "ImpactPrefabPath": "",
+          "AnimationsToUse": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.SkillAnimationDefinition, Assembly-CSharp",
+              "ClassID": "e629e8c3-cf8d-4363-b906-2506258c0fda",
+              "LegacyAnim": null,
+              "CastingLegacyAnim": null,
+              "ApproachLegacyAnim": null,
+              "LandLegacyAnim": null,
+              "CastSkillAnimSet": 1,
+              "CastAnimNumber": 0,
+              "CastingSkillAnimSet": 1,
+              "CastingAnimNumber": 1,
+              "ApproachSkillAnimSet": 0,
+              "ApproachAnimNumber": 0,
+              "LandSkillAnimSet": 0,
+              "LandAnimNumber": 0
+            }
+          ],
+          "CurrentCoolDownTime": 0.0,
+          "TimesUsed": 0,
+          "RequireVitalBelowX": false,
+          "RequireVitalAboveX": false,
+          "RequiredVitalId": null,
+          "RequireEquippedWep": false,
+          "RequiredEquippedWepTypeID": "",
+          "AlwaysRequireTarget": false,
+          "MovementType": 0,
+          "MoveToSpeed": 25.0,
+          "JumpToHeight": 5.0,
+          "LandTime": 0.1,
+          "MaxComboTime": 0.0,
+          "ReqPrevSkillInCombo": false,
+          "CurrentComboTime": 0.0,
+          "PrevSkillForComboID": null,
+          "ID": "ff243574-41a1-4b39-a345-036caaad0fae",
           "IsMaxxedOut": true,
           "OffCooldown": true
         }
