@@ -958,7 +958,34 @@
           "$type": "LogicSpawn.RPGMaker.EquipmentInfo, Assembly-CSharp",
           "Definitions": []
         },
-        "VisualCustomisations": []
+        "VisualCustomisations": [
+          {
+            "$type": "LogicSpawn.RPGMaker.VisualCustomisation, Assembly-CSharp",
+            "Id": "33939caa-f929-4d15-8c2e-4a0f65d7a3ce",
+            "Identifier": "Size",
+            "CustomisationType": 2,
+            "DisplayType": 0,
+            "TargetedGameObjectName": "Motion",
+            "TargetedGameObjectNames": [],
+            "MaterialPaths": [],
+            "StringRef": "",
+            "StringRefTwo": "",
+            "MinFloatValue": 0.5,
+            "MaxFloatValue": 1.5,
+            "LabelOptions": [],
+            "ImageOptions": [],
+            "ChildCustomisations": [],
+            "ScaleX": true,
+            "ScaleY": true,
+            "ScaleZ": true,
+            "ColorOptions": [],
+            "SavedFloatValue": 0.0,
+            "SavedColorValue": null,
+            "SavedStringValue": null,
+            "StartingValueFloat": 1.0,
+            "StartingValueInt": 0
+          }
+        ]
       }
     ],
     "Difficulties": [
