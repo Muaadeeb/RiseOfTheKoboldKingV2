@@ -71,9 +71,9 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
         "Name": "Strength",
-        "Description": "",
+        "Description": "How much you can lift and how hard you hit in melee.",
         "DefaultValue": 10,
-        "ID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
+        "ID": "d0d1df39-0799-457e-819d-c16cf7ba8ed2",
         "Color": 0,
         "HasMaxValue": false,
         "MaxValue": 0,
@@ -82,7 +82,7 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
         "Name": "Dexterity",
-        "Description": "",
+        "Description": "How stealthy, agile, and hard to hit you are.",
         "DefaultValue": 10,
         "ID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
         "Color": 0,
@@ -93,7 +93,7 @@
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
         "Name": "Intelligence",
-        "Description": "",
+        "Description": "How many skill points and spells you get(as a wizard for spells)",
         "DefaultValue": 10,
         "ID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
         "Color": 0,
@@ -103,10 +103,21 @@
       },
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
-        "Name": "Vitality",
-        "Description": "",
+        "Name": "Wisdom",
+        "Description": "How wise and how many spells you get(for cleric spells)",
         "DefaultValue": 10,
         "ID": "79197725-6bfa-473c-8515-df593a0fe87c",
+        "Color": 0,
+        "HasMaxValue": false,
+        "MaxValue": 0,
+        "ImagePath": null
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
+        "Name": "Charisma",
+        "Description": "Better at persuading and more liked or feared, and more spells(spells for sorcerer)",
+        "DefaultValue": 10,
+        "ID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
         "Color": 0,
         "HasMaxValue": false,
         "MaxValue": 0,
@@ -855,11 +866,6 @@
         "StartingAttributes": [
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
-            "AsvtID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
-            "Amount": 10
-          },
-          {
-            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
             "Amount": 10
           },
@@ -871,6 +877,16 @@
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "d0d1df39-0799-457e-819d-c16cf7ba8ed2",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
             "Amount": 10
           }
         ],
@@ -917,11 +933,6 @@
         "AttributePerLevel": [
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
-            "AsvtID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
-            "Amount": 5
-          },
-          {
-            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
             "Amount": 0
           },
@@ -933,6 +944,16 @@
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "d0d1df39-0799-457e-819d-c16cf7ba8ed2",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
             "Amount": 0
           }
         ],
@@ -984,7 +1005,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 0.691730142,
+            "SavedFloatValue": 1.0,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1468,18 +1489,6 @@
           "Attributes": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
-              "ID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
-              "BaseValue": 10,
-              "EquipValue": 0,
-              "SkillValue": 0,
-              "TempValue": 0,
-              "HasMaxValue": false,
-              "MaxValue": 0,
-              "Color": 0,
-              "TotalValue": 10
-            },
-            {
-              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
               "ID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
               "BaseValue": 10,
               "EquipValue": 0,
@@ -1513,6 +1522,30 @@
               "MaxValue": 0,
               "Color": 0,
               "TotalValue": 10
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "d0d1df39-0799-457e-819d-c16cf7ba8ed2",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
             }
           ],
           "Vitals": [
@@ -1970,18 +2003,6 @@
           "Attributes": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
-              "ID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
-              "BaseValue": 10,
-              "EquipValue": 0,
-              "SkillValue": 0,
-              "TempValue": 0,
-              "HasMaxValue": false,
-              "MaxValue": 0,
-              "Color": 0,
-              "TotalValue": 10
-            },
-            {
-              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
               "ID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
               "BaseValue": 10,
               "EquipValue": 0,
@@ -2015,6 +2036,30 @@
               "MaxValue": 0,
               "Color": 0,
               "TotalValue": 10
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "d0d1df39-0799-457e-819d-c16cf7ba8ed2",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
+              "ID": "b6af353f-22d1-46c5-9603-c93d5dd2f37c",
+              "BaseValue": 1,
+              "EquipValue": 0,
+              "SkillValue": 0,
+              "TempValue": 0,
+              "HasMaxValue": false,
+              "MaxValue": 0,
+              "Color": 0,
+              "TotalValue": 1
             }
           ],
           "Vitals": [
