@@ -83,44 +83,33 @@
     "AttributesDefinitions": [
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
-        "Name": "Strength",
+        "Name": "Endurance",
         "Description": "",
         "DefaultValue": 10,
         "ID": "c1d4a959-0e29-42db-9bbb-e4361a59ead4",
-        "Color": 0,
-        "HasMaxValue": false,
-        "MaxValue": 0,
+        "Color": 1,
+        "HasMaxValue": true,
+        "MaxValue": 100,
         "ImagePath": null
       },
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
-        "Name": "Dexterity",
+        "Name": "Agility",
         "Description": "",
         "DefaultValue": 10,
         "ID": "b422d55f-d31a-4716-a8ac-b42be31cbe1f",
-        "Color": 0,
+        "Color": 2,
         "HasMaxValue": false,
         "MaxValue": 0,
         "ImagePath": null
       },
       {
         "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
-        "Name": "Intelligence",
+        "Name": "Wizarding",
         "Description": "",
         "DefaultValue": 10,
         "ID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
-        "Color": 0,
-        "HasMaxValue": false,
-        "MaxValue": 0,
-        "ImagePath": null
-      },
-      {
-        "$type": "LogicSpawn.RPGMaker.Rm_AttributeDefintion, Assembly-CSharp",
-        "Name": "Vitality",
-        "Description": "",
-        "DefaultValue": 10,
-        "ID": "79197725-6bfa-473c-8515-df593a0fe87c",
-        "Color": 0,
+        "Color": 11,
         "HasMaxValue": false,
         "MaxValue": 0,
         "ImagePath": null
@@ -138,7 +127,7 @@
         "ID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
         "Color": 0,
         "HasUpperLimit": false,
-        "BaseRegenPercentValue": 0.0,
+        "BaseRegenPercentValue": 10.0,
         "AlwaysStartsAtZero": false,
         "RegenWhileInCombat": false,
         "ReduceHealthIfZero": false,
@@ -165,6 +154,46 @@
         "ReductionIntervalSeconds": 5.0,
         "ReduceByFixedAmount": false,
         "ReductionFixedAmount": 1,
+        "ReductionPercentageAmount": 0.01,
+        "ImagePath": null
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_VitalDefinition, Assembly-CSharp",
+        "Name": "Rage",
+        "Description": "",
+        "DefaultValue": 100,
+        "UpperLimit": 100,
+        "IsHealth": false,
+        "ID": "6891a1b4-c431-4240-9046-fb200c57c25e",
+        "Color": 0,
+        "HasUpperLimit": false,
+        "BaseRegenPercentValue": 0.0,
+        "AlwaysStartsAtZero": false,
+        "RegenWhileInCombat": true,
+        "ReduceHealthIfZero": false,
+        "ReductionIntervalSeconds": 5.0,
+        "ReduceByFixedAmount": false,
+        "ReductionFixedAmount": 1,
+        "ReductionPercentageAmount": 0.01,
+        "ImagePath": null
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_VitalDefinition, Assembly-CSharp",
+        "Name": "Hunger",
+        "Description": "",
+        "DefaultValue": 0,
+        "UpperLimit": 100,
+        "IsHealth": false,
+        "ID": "b9cda3ba-4e13-4ade-b301-dc166bb030e1",
+        "Color": 0,
+        "HasUpperLimit": false,
+        "BaseRegenPercentValue": -0.01,
+        "AlwaysStartsAtZero": false,
+        "RegenWhileInCombat": false,
+        "ReduceHealthIfZero": true,
+        "ReductionIntervalSeconds": 5.0,
+        "ReduceByFixedAmount": true,
+        "ReductionFixedAmount": 3,
         "ReductionPercentageAmount": 0.01,
         "ImagePath": null
       }
@@ -880,11 +909,6 @@
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
             "Amount": 10
-          },
-          {
-            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
-            "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
-            "Amount": 10
           }
         ],
         "StartingStats": [
@@ -924,6 +948,16 @@
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "f158a2e3-4c90-440f-8f03-fed6df016a31",
             "Amount": 100
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "6891a1b4-c431-4240-9046-fb200c57c25e",
+            "Amount": 101
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
+            "AsvtID": "b9cda3ba-4e13-4ade-b301-dc166bb030e1",
+            "Amount": 100
           }
         ],
         "StartingTraitLevels": [],
@@ -941,11 +975,6 @@
           {
             "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
             "AsvtID": "fedc2b7d-2e49-45d3-97ae-85e439f20227",
-            "Amount": 0
-          },
-          {
-            "$type": "LogicSpawn.RPGMaker.Rm_AsvtAmount, Assembly-CSharp",
-            "AsvtID": "79197725-6bfa-473c-8515-df593a0fe87c",
             "Amount": 0
           }
         ],
@@ -997,7 +1026,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 2.0,
+            "SavedFloatValue": 0.682837069,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
@@ -1424,18 +1453,6 @@
               "MaxValue": 0,
               "Color": 0,
               "TotalValue": 10
-            },
-            {
-              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
-              "ID": "79197725-6bfa-473c-8515-df593a0fe87c",
-              "BaseValue": 10,
-              "EquipValue": 0,
-              "SkillValue": 0,
-              "TempValue": 0,
-              "HasMaxValue": false,
-              "MaxValue": 0,
-              "Color": 0,
-              "TotalValue": 10
             }
           ],
           "Vitals": [
@@ -1481,6 +1498,52 @@
               "ReduceByFixedAmount": false,
               "ReductionFixedAmount": 1,
               "ReductionPercentageAmount": 0.01,
+              "ReductionIntervalTimer": 0.0,
+              "Color": 0,
+              "_currentValue": 0
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Vital, Assembly-CSharp",
+              "ID": "6891a1b4-c431-4240-9046-fb200c57c25e",
+              "BaseValue": 0,
+              "ScaledBaseValue": 0,
+              "AttributeValue": 0,
+              "SkillValue": 0,
+              "EquipValue": 0,
+              "RegenPercentValue": 0.0,
+              "IsHealth": false,
+              "AlwaysStartsAtZero": false,
+              "RegenWhileInCombat": false,
+              "HasUpperLimit": false,
+              "UpperLimit": 0,
+              "ReduceHealthIfZero": false,
+              "ReductionIntervalSeconds": 0.0,
+              "ReduceByFixedAmount": false,
+              "ReductionFixedAmount": 0,
+              "ReductionPercentageAmount": 0.0,
+              "ReductionIntervalTimer": 0.0,
+              "Color": 0,
+              "_currentValue": 0
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Vital, Assembly-CSharp",
+              "ID": "b9cda3ba-4e13-4ade-b301-dc166bb030e1",
+              "BaseValue": 0,
+              "ScaledBaseValue": 0,
+              "AttributeValue": 0,
+              "SkillValue": 0,
+              "EquipValue": 0,
+              "RegenPercentValue": 0.0,
+              "IsHealth": false,
+              "AlwaysStartsAtZero": false,
+              "RegenWhileInCombat": false,
+              "HasUpperLimit": false,
+              "UpperLimit": 0,
+              "ReduceHealthIfZero": false,
+              "ReductionIntervalSeconds": 0.0,
+              "ReduceByFixedAmount": false,
+              "ReductionFixedAmount": 0,
+              "ReductionPercentageAmount": 0.0,
               "ReductionIntervalTimer": 0.0,
               "Color": 0,
               "_currentValue": 0
@@ -1917,18 +1980,6 @@
               "MaxValue": 0,
               "Color": 0,
               "TotalValue": 10
-            },
-            {
-              "$type": "LogicSpawn.RPGMaker.Core.Attribute, Assembly-CSharp",
-              "ID": "79197725-6bfa-473c-8515-df593a0fe87c",
-              "BaseValue": 10,
-              "EquipValue": 0,
-              "SkillValue": 0,
-              "TempValue": 0,
-              "HasMaxValue": false,
-              "MaxValue": 0,
-              "Color": 0,
-              "TotalValue": 10
             }
           ],
           "Vitals": [
@@ -1974,6 +2025,52 @@
               "ReduceByFixedAmount": false,
               "ReductionFixedAmount": 1,
               "ReductionPercentageAmount": 0.01,
+              "ReductionIntervalTimer": 0.0,
+              "Color": 0,
+              "_currentValue": 0
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Vital, Assembly-CSharp",
+              "ID": "6891a1b4-c431-4240-9046-fb200c57c25e",
+              "BaseValue": 0,
+              "ScaledBaseValue": 0,
+              "AttributeValue": 0,
+              "SkillValue": 0,
+              "EquipValue": 0,
+              "RegenPercentValue": 0.0,
+              "IsHealth": false,
+              "AlwaysStartsAtZero": false,
+              "RegenWhileInCombat": false,
+              "HasUpperLimit": false,
+              "UpperLimit": 0,
+              "ReduceHealthIfZero": false,
+              "ReductionIntervalSeconds": 0.0,
+              "ReduceByFixedAmount": false,
+              "ReductionFixedAmount": 0,
+              "ReductionPercentageAmount": 0.0,
+              "ReductionIntervalTimer": 0.0,
+              "Color": 0,
+              "_currentValue": 0
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Vital, Assembly-CSharp",
+              "ID": "b9cda3ba-4e13-4ade-b301-dc166bb030e1",
+              "BaseValue": 0,
+              "ScaledBaseValue": 0,
+              "AttributeValue": 0,
+              "SkillValue": 0,
+              "EquipValue": 0,
+              "RegenPercentValue": 0.0,
+              "IsHealth": false,
+              "AlwaysStartsAtZero": false,
+              "RegenWhileInCombat": false,
+              "HasUpperLimit": false,
+              "UpperLimit": 0,
+              "ReduceHealthIfZero": false,
+              "ReductionIntervalSeconds": 0.0,
+              "ReduceByFixedAmount": false,
+              "ReductionFixedAmount": 0,
+              "ReductionPercentageAmount": 0.0,
               "ReductionIntervalTimer": 0.0,
               "Color": 0,
               "_currentValue": 0
@@ -2920,6 +3017,64 @@
               },
               "WindowID": 10,
               "Identifier": "f158a2e3-4c90-440f-8f03-fed6df016a31",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Rage",
+              "NewDescription": "Add additional nodes to modify base value of a vital based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Rage",
+              "ReturnType": 0,
+              "ID": "7920ce3f-2df5-4772-be2d-836b2bd648b2",
+              "NodeChainName": "Unnamed Vital",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 487.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 11,
+              "Identifier": "6891a1b4-c431-4240-9046-fb200c57c25e",
+              "Target": 0,
+              "PrevNodeLinks": [],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib"
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CombatStartNode, Assembly-CSharp",
+              "NewName": "Hunger",
+              "NewDescription": "Add additional nodes to modify base value of a vital based on other values, e.g. an attribute. Remember: don't cause circular scaling as this can result in an infinite loop.",
+              "NewSubText": "Scaling for Hunger",
+              "ReturnType": 0,
+              "ID": "284a5504-f221-432f-b395-a9a2021946c6",
+              "NodeChainName": "Unnamed Vital",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 25.0,
+                "Y": 687.5,
+                "Width": 50.0,
+                "Height": 50.0
+              },
+              "WindowID": 12,
+              "Identifier": "b9cda3ba-4e13-4ade-b301-dc166bb030e1",
               "Target": 0,
               "PrevNodeLinks": [],
               "NextNodeLinks": [
