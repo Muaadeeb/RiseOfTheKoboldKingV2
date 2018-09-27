@@ -3,8 +3,8 @@
   "Version": "RPG All-In-One v1.5.2",
   "GameInfo": {
     "$type": "LogicSpawn.RPGMaker.Rmh_GameInfo, Assembly-CSharp",
-    "GameTitle": "My Game",
-    "GameCompany": "My Company",
+    "GameTitle": "Rise of the Kobold King",
+    "GameCompany": "The Coders of the Round Table",
     "CreditsInfo": [
       {
         "$type": "LogicSpawn.RPGMaker.Rm_CreditsInfo, Assembly-CSharp",
