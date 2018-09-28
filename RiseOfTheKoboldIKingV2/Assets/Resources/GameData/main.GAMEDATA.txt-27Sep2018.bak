@@ -3,8 +3,8 @@
   "Version": "RPG All-In-One v1.5.2",
   "GameInfo": {
     "$type": "LogicSpawn.RPGMaker.Rmh_GameInfo, Assembly-CSharp",
-    "GameTitle": "My Game",
-    "GameCompany": "My Company",
+    "GameTitle": "Rise Of the Kolbold King",
+    "GameCompany": "COTRT",
     "CreditsInfo": [
       {
         "$type": "LogicSpawn.RPGMaker.Rm_CreditsInfo, Assembly-CSharp",
@@ -19,13 +19,13 @@
     ],
     "Cursors": {
       "$type": "LogicSpawn.RPGMaker.Cursors, Assembly-CSharp",
-      "DefaultCursorPath": "",
-      "NpcCursorPath": "",
-      "InteractCursorPath": "",
-      "ItemCursorPath": "",
-      "EnemyCursorPath": "",
-      "HarvestCursorPath": "",
-      "DraggableCursorPath": ""
+      "DefaultCursorPath": "RPGMakerAssets/logicspawn_new_mini",
+      "NpcCursorPath": "RPGMakerAssets/ToolbarIcons/cursor1",
+      "InteractCursorPath": "RPGMakerAssets/ToolbarIcons/cursor2",
+      "ItemCursorPath": "RPGMakerAssets/Gold 1",
+      "EnemyCursorPath": "RPGMakerAssets/enemyIcon",
+      "HarvestCursorPath": "RPGMakerAssets/ToolbarIcons/combatIcon",
+      "DraggableCursorPath": "RPGMakerAssets/ToolbarIcons/achievementIcon"
     },
     "MinimapOptions": {
       "$type": "LogicSpawn.RPGMaker.MinimapOptions, Assembly-CSharp",
@@ -50,7 +50,12 @@
     "PlayUniqueMusicForBattles": false,
     "PlayUniqueMusicForScenes": false,
     "PlayUniqueMusicForDeath": false,
-    "GlobalPlaylist": [],
+    "GlobalPlaylist": [
+      {
+        "$type": "LogicSpawn.RPGMaker.Core.AudioContainer, Assembly-CSharp",
+        "AudioPath": "Audio/DemoAudio/03. FULLY OF GLORY SECOND PART LOOPABLE-01"
+      }
+    ],
     "ScenePlaylists": [],
     "BattlePlaylist": [],
     "DeathMusic": {
@@ -536,7 +541,7 @@
         "StartingPet": "",
         "HasStartingPet": false,
         "StartAtWorldLocation": false,
-        "StartingScene": "DemoScene",
+        "StartingScene": "Area-01",
         "StartingWorldArea": null,
         "StartingLocation": null,
         "AutoAttackPrefabPath": "",
@@ -979,7 +984,7 @@
             "ScaleY": true,
             "ScaleZ": true,
             "ColorOptions": [],
-            "SavedFloatValue": 1.147314,
+            "SavedFloatValue": 0.9150113,
             "SavedColorValue": null,
             "SavedStringValue": null,
             "StartingValueFloat": 1.0,
