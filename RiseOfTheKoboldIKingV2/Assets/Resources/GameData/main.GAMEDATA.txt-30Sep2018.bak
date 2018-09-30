@@ -574,7 +574,22 @@
     ],
     "RmTierHandler": {
       "$type": "LogicSpawn.RPGMaker.Rm_TierHandler, Assembly-CSharp",
-      "Tiers": [],
+      "Tiers": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Rm_Tier, Assembly-CSharp",
+          "TierID": "d9c0b588-112c-46a0-9d98-6f39c492427b",
+          "Name": "Tier 1",
+          "minLevel": 0.0,
+          "maxLevel": 20.0
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Rm_Tier, Assembly-CSharp",
+          "TierID": "801dbbb7-6635-4d30-b7ea-193d9c183e32",
+          "Name": "Tier 2",
+          "minLevel": 21.0,
+          "maxLevel": 100.0
+        }
+      ],
       "MaxLevel": 100
     },
     "StashMode": 1,
@@ -1085,7 +1100,33 @@
         "SkillMetaSusceptibilities": [],
         "StartingSkillIds": [],
         "StartingTalentIds": [],
-        "StartingItems": [],
+        "StartingItems": [
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "dc1b07ac-b575-4742-a9dc-e06085e94468",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "635fb61d-3084-4392-b8ee-d34c87d48619",
+            "Amount": 10
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "704f0e03-f8a5-4527-96ef-887e9136884e",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "669bd883-189b-420c-8454-269128349b3e",
+            "Amount": 0
+          },
+          {
+            "$type": "LogicSpawn.RPGMaker.Core.LootDefinition, Assembly-CSharp",
+            "ItemID": "28368ff7-4703-4e8e-846c-00aaee5f6097",
+            "Amount": 10
+          }
+        ],
         "StartingEquippedWeapon": {
           "$type": "LogicSpawn.RPGMaker.StartEquipDefinition, Assembly-CSharp",
           "Enabled": true,
@@ -1421,43 +1462,108 @@
     },
     "CraftableItems": {
       "$type": "LogicSpawn.RPGMaker.Core.CraftableItemRepository, Assembly-CSharp",
-      "AllItems": []
+      "AllItems": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 0,
+            "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "FixedRestore": true,
+            "AmountToRestore": 500,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.0,
+            "Duration": 1.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 0.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "8dfcca09-c27a-424d-aec4-6ba70489df4a",
+          "InventoryRefID": null,
+          "Name": "Heath Potion+",
+          "Description": "A supper helath potion",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 1,
+          "ItemType": 2,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
+        }
+      ]
     },
     "CraftLists": {
       "$type": "LogicSpawn.RPGMaker.Core.CraftListRepository, Assembly-CSharp",
       "TierCraftLists": [
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
+          "TierID": "d9c0b588-112c-46a0-9d98-6f39c492427b",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "ae84e725-1c32-4d6a-a852-71abb4d34da8",
+              "Quantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "ba82a482-f8a5-463a-9650-f07be71788fe",
+              "Quantity": 1
+            }
+          ]
         },
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
-        },
-        {
-          "$type": "LogicSpawn.RPGMaker.Core.Rm_TierCraftList, Assembly-CSharp",
-          "TierID": "",
-          "ItemsNeededIDs": []
+          "TierID": "801dbbb7-6635-4d30-b7ea-193d9c183e32",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "ae84e725-1c32-4d6a-a852-71abb4d34da8",
+              "Quantity": 100
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "ba82a482-f8a5-463a-9650-f07be71788fe",
+              "Quantity": 100
+            }
+          ]
         }
       ],
-      "CustomCraftLists": []
+      "CustomCraftLists": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Rm_CustomCraftList, Assembly-CSharp",
+          "ItemID": "8dfcca09-c27a-424d-aec4-6ba70489df4a",
+          "ItemsNeededIDs": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "dc1b07ac-b575-4742-a9dc-e06085e94468",
+              "Quantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.CraftListItem, Assembly-CSharp",
+              "ItemID": "28368ff7-4703-4e8e-846c-00aaee5f6097",
+              "Quantity": 5
+            }
+          ]
+        }
+      ]
     },
     "Items": {
       "$type": "LogicSpawn.RPGMaker.Core.ItemRepository, Assembly-CSharp",
@@ -1489,8 +1595,8 @@
           },
           "Damage": {
             "$type": "LogicSpawn.RPGMaker.Core.Damage, Assembly-CSharp",
-            "MinDamage": 1,
-            "MaxDamage": 1,
+            "MinDamage": 25,
+            "MaxDamage": 50,
             "CriticalChance": 0.0,
             "ElementalDamages": [],
             "SkillMetaID": null,
@@ -2217,6 +2323,51 @@
           "DropEventHasRun": false,
           "CustomGroundPrefabPath": "",
           "Pages": 1
+        },
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.Consumable, Assembly-CSharp",
+          "Restoration": {
+            "$type": "LogicSpawn.RPGMaker.Core.Restoration, Assembly-CSharp",
+            "RestorationType": 0,
+            "VitalToRestoreID": "f1d131b5-26be-4ac0-b0fe-dbf478e17ff3",
+            "FixedRestore": true,
+            "AmountToRestore": 10,
+            "PercentToRestore": 0.0,
+            "SecBetweenRestore": 0.0,
+            "Duration": 1.0,
+            "IntervalTimer": 0.0,
+            "SkillMetaId": null
+          },
+          "RestoresVital": true,
+          "Cooldown": 0.0,
+          "CurrentCooldown": 0.0,
+          "RemovesStatusEffect": false,
+          "RemoveStatusEffectID": "",
+          "AddsStatusEffect": false,
+          "AddStatusEffectID": "",
+          "ID": "28368ff7-4703-4e8e-846c-00aaee5f6097",
+          "InventoryRefID": null,
+          "Name": "Apple",
+          "Description": "",
+          "RarityID": "7934ea24-15b7-4a4c-b57b-c2bda0fbe0c3",
+          "Weight": 1.0,
+          "SellValue": 1,
+          "BuyValue": 50,
+          "ItemType": 2,
+          "ImagePath": "",
+          "CanBeDropped": true,
+          "RunEventOnUse": false,
+          "EventTreeIdToRunOnUse": "",
+          "EventHasRun": false,
+          "RunEventOnPickup": false,
+          "EventTreeIdToRunOnPickup": "",
+          "PickupEventHasRun": false,
+          "RunEventOnDrop": false,
+          "EventTreeIdToRunOnDrop": "",
+          "DropEventHasRun": false,
+          "CustomGroundPrefabPath": "",
+          "CurrentStacks": 1,
+          "RequiredLevel": 0
         }
       ]
     },
@@ -2787,7 +2938,7 @@
           "OverrideAggroRadiusValue": 25.0,
           "MonsterTypeID": "c832b08a-9aec-4835-b489-8bd6e0814710",
           "GuaranteedLoot": [],
-          "MaxItemsFromLootTable": 1,
+          "MaxItemsFromLootTable": 5,
           "LootTables": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.LootOptions, Assembly-CSharp",
@@ -3383,7 +3534,50 @@
     },
     "Vendor": {
       "$type": "LogicSpawn.RPGMaker.Core.NPCVendorRepository, Assembly-CSharp",
-      "AllVendors": []
+      "AllVendors": [
+        {
+          "$type": "LogicSpawn.RPGMaker.Core.VendorShop, Assembly-CSharp",
+          "Name": "Basic Vendor Shop",
+          "VendorShopItems": [
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.VendorShopItem, Assembly-CSharp",
+              "VendorItemRef": "603de649-7009-4c74-ba11-36f771e5b86e",
+              "ItemID": "5b6f8318-d158-4798-90c7-2c9810821c68",
+              "QuantityRemaining": 1,
+              "InfiniteStock": false
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.VendorShopItem, Assembly-CSharp",
+              "VendorItemRef": "8d31574e-4332-4195-87da-b94d5465b22d",
+              "ItemID": "dc1b07ac-b575-4742-a9dc-e06085e94468",
+              "QuantityRemaining": 10,
+              "InfiniteStock": false
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.VendorShopItem, Assembly-CSharp",
+              "VendorItemRef": "c28d5898-f78d-4305-b03d-22bcc5fc3055",
+              "ItemID": "635fb61d-3084-4392-b8ee-d34c87d48619",
+              "QuantityRemaining": 10,
+              "InfiniteStock": false
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.VendorShopItem, Assembly-CSharp",
+              "VendorItemRef": "7dfeb74a-0847-453b-bf93-f3a674f199fc",
+              "ItemID": "28368ff7-4703-4e8e-846c-00aaee5f6097",
+              "QuantityRemaining": 1,
+              "InfiniteStock": true
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.VendorShopItem, Assembly-CSharp",
+              "VendorItemRef": "ae953fab-890b-49e6-bf33-8948379bf297",
+              "ItemID": "669bd883-189b-420c-8454-269128349b3e",
+              "QuantityRemaining": 1,
+              "InfiniteStock": false
+            }
+          ],
+          "ID": "1b8e6bbd-4d8e-40a8-bcc3-af950fdc27ae"
+        }
+      ]
     },
     "Quests": {
       "$type": "LogicSpawn.RPGMaker.Core.QuestRepository, Assembly-CSharp",
@@ -3495,7 +3689,7 @@
         {
           "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTable, Assembly-CSharp",
           "Name": "Basic Loot",
-          "ChanceForItem": 50,
+          "ChanceForItem": 100,
           "LootTableItems": [
             {
               "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
@@ -3505,9 +3699,9 @@
               "IsCraftableItem": false,
               "IsGold": false,
               "IsEmpty": false,
-              "Chance": 25.0,
+              "Chance": 10.0,
               "sliderMin": 0.0,
-              "sliderMax": 25.0,
+              "sliderMax": 10.0,
               "MinQuantity": 1,
               "MaxQuantity": 1
             },
@@ -3519,11 +3713,123 @@
               "IsCraftableItem": false,
               "IsGold": true,
               "IsEmpty": false,
-              "Chance": 75.0,
-              "sliderMin": 25.0,
-              "sliderMax": 100.0,
+              "Chance": 10.0,
+              "sliderMin": 10.0,
+              "sliderMax": 20.0,
               "MinQuantity": 100,
               "MaxQuantity": 200
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "5b6f8318-d158-4798-90c7-2c9810821c68",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 20.0,
+              "sliderMax": 30.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "87aaf809-38ce-4ed0-ae75-cee353d1a7da",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 30.0,
+              "sliderMax": 40.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "ba82a482-f8a5-463a-9650-f07be71788fe",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 40.0,
+              "sliderMax": 50.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "ae84e725-1c32-4d6a-a852-71abb4d34da8",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 50.0,
+              "sliderMax": 60.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "dc1b07ac-b575-4742-a9dc-e06085e94468",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 60.0,
+              "sliderMax": 70.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "635fb61d-3084-4392-b8ee-d34c87d48619",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 70.0,
+              "sliderMax": 80.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "669bd883-189b-420c-8454-269128349b3e",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 80.0,
+              "sliderMax": 90.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.Rm_LootTableItem, Assembly-CSharp",
+              "ItemID": "8a56dda9-b0ea-4e9f-bb2b-ac2ee4534e1b",
+              "IsNormalItem": true,
+              "IsQuestItem": false,
+              "IsCraftableItem": false,
+              "IsGold": false,
+              "IsEmpty": false,
+              "Chance": 10.0,
+              "sliderMin": 90.0,
+              "sliderMax": 100.0,
+              "MinQuantity": 1,
+              "MaxQuantity": 1
             }
           ],
           "ID": "266d30f8-d20c-457f-8201-6444413db762"
@@ -4126,10 +4432,10 @@
               "NodeChainName": "NodeChain",
               "SerializableRect": {
                 "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
-                "X": 161.0,
-                "Y": 105.0,
+                "X": 96.0,
+                "Y": 106.0,
                 "Width": 282.0,
-                "Height": 157.0
+                "Height": 182.0
               },
               "WindowID": 1,
               "Identifier": null,
@@ -4147,11 +4453,15 @@
                 },
                 {
                   "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
-                  "ID": "3b7f4be8-2ca3-4a1a-8e02-794f92b65957"
+                  "ID": "8696231b-b7b9-484b-af0f-d63291839a28"
                 },
                 {
                   "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
                   "ID": ""
+                },
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "3b7f4be8-2ca3-4a1a-8e02-794f92b65957"
                 }
               ],
               "Parameters": {
@@ -4306,10 +4616,6 @@
               "PrevNodeLinks": [
                 {
                   "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
-                  "ID": "1b652880-1809-405e-b37f-baac09e92e57"
-                },
-                {
-                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
                   "ID": "386b64a3-c15b-453a-a47c-65829a4ef7f6"
                 },
                 {
@@ -4319,6 +4625,10 @@
                 {
                   "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
                   "ID": "3e352fd6-67d5-4b3d-9806-3915cd42af60"
+                },
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "1b652880-1809-405e-b37f-baac09e92e57"
                 }
               ],
               "NextNodeLinks": [
@@ -4785,6 +5095,102 @@
                   "Source": 2,
                   "Property": null,
                   "Value": true,
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": ""
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                }
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.PlayerResponseNode, Assembly-CSharp",
+              "ID": "8696231b-b7b9-484b-af0f-d63291839a28",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 423.0,
+                "Y": 28.0,
+                "Width": 299.0,
+                "Height": 107.0
+              },
+              "WindowID": 13,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "1b652880-1809-405e-b37f-baac09e92e57"
+                }
+              ],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "55a526d4-e13b-45a6-84d3-d2ba6a2ecfac"
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib",
+                "Dialog": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Dialog",
+                  "PropertyType": 1,
+                  "PropertyFamily": 0,
+                  "Source": 1,
+                  "Property": {
+                    "$type": "LogicSpawn.RPGMaker.Core.RPGVector2, Assembly-CSharp",
+                    "X": 0.0,
+                    "Y": 0.0
+                  },
+                  "Value": "May I buy Some items?",
+                  "InputNodeId": {
+                    "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                    "ID": ""
+                  },
+                  "SubParams": {
+                    "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.SubNodeParameter, Assembly-CSharp]], mscorlib"
+                  }
+                }
+              }
+            },
+            {
+              "$type": "LogicSpawn.RPGMaker.Core.OpenVendorNode, Assembly-CSharp",
+              "ID": "55a526d4-e13b-45a6-84d3-d2ba6a2ecfac",
+              "NodeChainName": "NodeChain",
+              "SerializableRect": {
+                "$type": "LogicSpawn.RPGMaker.SerializableRect, Assembly-CSharp",
+                "X": 800.0,
+                "Y": 56.0,
+                "Width": 212.0,
+                "Height": 105.0
+              },
+              "WindowID": 14,
+              "Identifier": null,
+              "Target": 0,
+              "PrevNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": "8696231b-b7b9-484b-af0f-d63291839a28"
+                }
+              ],
+              "NextNodeLinks": [
+                {
+                  "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
+                  "ID": ""
+                }
+              ],
+              "Parameters": {
+                "$type": "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp]], mscorlib",
+                "Vendor Shop": {
+                  "$type": "LogicSpawn.RPGMaker.Core.NodeParameter, Assembly-CSharp",
+                  "Name": "Vendor Shop",
+                  "PropertyType": 37,
+                  "PropertyFamily": 0,
+                  "Source": 1,
+                  "Property": null,
+                  "Value": "1b8e6bbd-4d8e-40a8-bcc3-af950fdc27ae",
                   "InputNodeId": {
                     "$type": "LogicSpawn.RPGMaker.Core.StringField, Assembly-CSharp",
                     "ID": ""
