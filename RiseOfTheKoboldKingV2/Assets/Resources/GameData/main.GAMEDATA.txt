@@ -609,22 +609,62 @@
         "$type": "LogicSpawn.RPGMaker.Rm_ClassNameDefinition, Assembly-CSharp",
         "ID": "Default_Builtin_Class_10101010",
         "Name": "Warrior",
-        "Description": "Peple trained to use weapons such as swords.",
+        "Description": "Buff Dudes who use Swords.",
         "Image": {
           "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
           "ImagePath": "RPGMakerAssets/ToolbarIcons/combatIcon"
+        }
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_ClassNameDefinition, Assembly-CSharp",
+        "ID": "d63eb376-2efa-4fcc-99b5-2222e1cc7aad",
+        "Name": "Cleric",
+        "Description": "Cool Guys who praise the heavens, wave thier arms around and make stuff explode.",
+        "Image": {
+          "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+          "ImagePath": ""
+        }
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_ClassNameDefinition, Assembly-CSharp",
+        "ID": "03a8cf5b-3aaf-41d3-83e3-aebc7cddfda9",
+        "Name": "Archer",
+        "Description": "Very Nifty folks who use ranged weapons to snipe enemies like pros. ",
+        "Image": {
+          "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+          "ImagePath": ""
         }
       }
     ],
     "RaceDefinitions": [
       {
         "$type": "LogicSpawn.RPGMaker.Rm_RaceDefinition, Assembly-CSharp",
-        "ID": "Default_Builtin_Race_10101010",
-        "Name": "Human",
-        "Description": "The humans lived on Earth.",
+        "ID": "bf6ba78d-f60e-4d19-87c1-a82e81b50694",
+        "Name": "Red",
+        "Description": "A member of the pretentious Red kobold tribe.",
         "Image": {
           "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
-          "ImagePath": "MyAssets/humanPortrait"
+          "ImagePath": ""
+        }
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_RaceDefinition, Assembly-CSharp",
+        "ID": "4a630fc6-aaf7-4a98-9bbf-3bbe70ae3ad6",
+        "Name": "Green",
+        "Description": "The Gree Kobolds are known for their nonviolent, agriculture-loving ways",
+        "Image": {
+          "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+          "ImagePath": ""
+        }
+      },
+      {
+        "$type": "LogicSpawn.RPGMaker.Rm_RaceDefinition, Assembly-CSharp",
+        "ID": "d1fbf760-c972-4612-a7f7-b0e45d6ddac1",
+        "Name": "Yellow",
+        "Description": "Yellow Kobolds are boring.",
+        "Image": {
+          "$type": "LogicSpawn.RPGMaker.Core.ImageContainer, Assembly-CSharp",
+          "ImagePath": ""
         }
       }
     ],
@@ -654,9 +694,9 @@
       }
     ],
     "MetaDataDefinitions": [],
-    "SkipCharacterCreation": true,
+    "SkipCharacterCreation": false,
     "SkipRaceSelection": false,
-    "SkipSubRaceSelection": false,
+    "SkipSubRaceSelection": true,
     "RemoveSubRaceDescription": true,
     "CustomisationsEnabled": true,
     "ShownDescription": 2,
