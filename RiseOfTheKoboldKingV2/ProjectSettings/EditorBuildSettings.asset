@@ -18,5 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoScenes/DemoScene.unity
     guid: 404c006dd82fb734a8405d2bf59896d8
   - enabled: 1
+    path: Assets/Scenes/GameStart.unity
+    guid: bfcb402b4e3c9bf44a1ab25b9f67a9ae
+  - enabled: 1
     path: Assets/Scenes/Area_1.unity
     guid: 2b90041c02fa0424794af2d500508091
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/BeforeBirthCutScene.unity
+    guid: bd15c92cd94810b47910974e0ebf9f8e
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/BeforeBirthCutScene2.unity
+    guid: c3b55854d4b280046b0929b8a71af45b
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/BeforeBirthCutScene3.unity
+    guid: c039a5abab1474346a7079896582cf3d

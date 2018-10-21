@@ -12,10 +12,14 @@ public class SplashFade : MonoBehaviour
     public int displayAtOnce = 2;
     private int currentIndex = -1;
     CutSceneScript script;
+    public Text Scenetext;
+    public Button skipbutton;
 
 
     void Start()
     {
+        Scenetext.text = CutSceneName;
+        skipbutton.enabled = false;
         foreach (var cutText in cutTextDisplays) cutText.onComplete += NextCut;
         var file = Resources.Load<TextAsset>("JSON\\" + CutSceneName);
         script = Newtonsoft.Json.JsonConvert.DeserializeObject<CutSceneScript>(Encoding.UTF8.GetString(file.bytes));
@@ -31,6 +35,10 @@ public class SplashFade : MonoBehaviour
         }
         else
         {
+            if(currentIndex >= 2)
+            {
+                skipbutton.enabled = true;
+            }
             int toShow = currentIndex % cutTextDisplays.Length;
             cutTextDisplays[toShow].ShowText(script.Cuts[currentIndex]);
             if (displayAtOnce > 0)
@@ -41,5 +49,10 @@ public class SplashFade : MonoBehaviour
             }
         }
     }
- 
+    public void SkipCutScene()
+    {
+        SceneManager.LoadScene(loadLevel);
+    }
+   
+
 }
